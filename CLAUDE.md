@@ -27,6 +27,28 @@ divergir do plano.
 - Banco: **SQLite no desenvolvimento, MySQL na entrega.** Use SQLAlchemy Core; o código não
   muda entre os dois, só a string de conexão.
 
+## Paleta
+
+Tons terrosos, definidos pelo aluno. Vale para páginas, gráficos e figuras do relatório.
+
+| Token | Claro | Escuro | Uso |
+| --- | --- | --- | --- |
+| `ink` | `#402905` | `#ead0a8` | texto principal; preenchimento de destaque máximo |
+| `ink-soft` | `#6b5428` | `#cbb68c` | texto secundário |
+| `muted` | `#7d6840` | `#9b8555` | rótulos, legendas |
+| `terra` | `#76552b` | `#d4b06f` | acento: ênfase, foco, bordas de destaque |
+| `ocre` | `#b69f66` | `#b69f66` | preenchimentos e barras — **nunca texto** (contraste 2,7:1) |
+| `ocre-soft` | `#ead0a8` | `#3d2f14` | fundos suaves, chips |
+| `ground` / `surface` | `#e9dcc0` / `#fbf5ea` | `#1a1207` / `#281d0d` | fundo da página / cartões |
+| `done` | `#5f7040` | `#8fa86a` | **semântico** (concluído), fora da identidade |
+
+A paleta é monocromática, então **hierarquia se faz por valor e preenchimento**, não por
+matiz: chip sólido escuro > chip sólido `terra` > chip contornado. Não invente uma segunda
+cor de acento para diferenciar dois elementos lado a lado.
+
+Em gráficos com várias séries, varie **valor e traço** (contínuo / tracejado / marcador)
+antes de sair da paleta — série de ensaio não deve depender só de cor para ser distinguida.
+
 ## Ambiente
 
 `uv` gerencia tudo. Python 3.14, Windows.
