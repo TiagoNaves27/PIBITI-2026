@@ -17,13 +17,6 @@ dependencies = [
     "pydantic>=2.8",
 ]
 
-[project.optional-dependencies]
-# Instalado apenas no Raspberry Pi (nao funciona no Windows)
-pi = [
-    "gpiozero>=2.0",
-    "adafruit-circuitpython-ads1x15>=2.4",
-]
-
 [dependency-groups]
 dev = [
     "pytest>=8.0",

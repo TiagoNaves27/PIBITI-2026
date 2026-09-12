@@ -1,16 +1,32 @@
 # PIBIC 2026 — Aquisição (IoT) e análise de ensaios de cisalhamento direto e triaxial
 
-Sistema automatizado de aquisição e análise de dados dos ensaios de cisalhamento direto e
-compressão triaxial, composto por três partes:
+Sistema automatizado de coleta e análise de dados dos ensaios de cisalhamento direto e
+compressão triaxial. As máquinas do laboratório já gravam os dados; o sistema os traduz,
+armazena, calcula os parâmetros de resistência e gera um relatório.
 
-**sensores → Raspberry Pi (aquisição) → MySQL (armazenamento) → app desktop Python (análise)**
+**arquivo bruto da máquina → parser → banco → cálculo (c, φ) → relatório PDF**
 
 - **Aluno:** Tiago Naves de Oliveira Alves
 - **Grupo:** GeoFluxo — Universidade de Brasília
-- **Plano de trabalho:** [`docs/plano/PlanoTrabalho-PIBIC_4.md`](docs/plano/PlanoTrabalho-PIBIC_4.md)
 
-> ⚠️ O plano de trabalho é o documento submetido ao PIBIC. O escopo real evoluiu desde então —
-> o que vale como estado atual está em [`docs/arquitetura/visao-geral.md`](docs/arquitetura/visao-geral.md).
+| Documento | Para quê |
+| --- | --- |
+| [`docs/arquitetura/visao-geral.md`](docs/arquitetura/visao-geral.md) | **estado real** do projeto — vale sobre o plano |
+| [`docs/plano/metas-semanais.md`](docs/plano/metas-semanais.md) | o que fazer nesta semana (2h) |
+| [`docs/plano/roteiro-estudos.md`](docs/plano/roteiro-estudos.md) | o que estudar e quando |
+| [`docs/plano/PlanoTrabalho-PIBIC_4.md`](docs/plano/PlanoTrabalho-PIBIC_4.md) | documento submetido ao PIBIC (histórico) |
+
+> ⚠️ O plano de trabalho previa aquisição via Raspberry Pi. Isso **saiu do escopo**: as
+> máquinas já digitalizam os dados. Ver `visao-geral.md` §1.
+
+## Descobrir o formato de um arquivo bruto
+
+```powershell
+uv run python scripts/inspecionar.py dados/exemplos/bruto/ensaio.csv
+```
+
+Reporta codificação, separador, tamanho do cabeçalho, colunas e o comando `pd.read_csv`
+correspondente.
 
 ## Estrutura
 
@@ -18,11 +34,13 @@ compressão triaxial, composto por três partes:
 docs/            plano, arquitetura, diário semanal, relatórios, artigo
 referencias/     biblioteca.bib + PDFs (não versionados)
 src/geotec/
-  aquisicao/     leitura dos sensores no Raspberry Pi, calibração
-  banco/         schema MySQL, modelos e ingestão
+  coleta/        busca dos arquivos gerados pelas máquinas
+  parsers/       tradução bruto → formato normalizado (um módulo por máquina)
+  banco/         schema, modelos e ingestão
   nucleo/        cálculos: tensões, curvas, Mohr-Coulomb, círculos de Mohr
-  io/            leitura/exportação de arquivos de ensaio
-  app/           aplicativo desktop
+  relatorio/     gráficos e PDF
+  io/            leitura/exportação de arquivos
+  app/           interface (adiada — ver visao-geral.md §7)
 notebooks/       exploração e validação
 dados/           brutos / processados / exemplos (versionados só os exemplos)
 tests/           testes automatizados
@@ -37,13 +55,7 @@ uv run pytest           # roda os testes
 uv run ruff check .     # lint
 ```
 
-No Raspberry Pi, incluir as dependências de hardware:
-
-```bash
-uv sync --extra pi
-```
-
 ## Banco de dados
 
-Copie `.env.example` para `.env` e preencha as credenciais do MySQL. O arquivo `.env`
-não é versionado.
+Durante o desenvolvimento, SQLite (arquivo local, sem configuração). Na entrega, MySQL —
+copie `.env.example` para `.env` e preencha as credenciais. O `.env` não é versionado.

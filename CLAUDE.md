@@ -1,9 +1,12 @@
 # Contexto do projeto
 
-PIBIC 2026 — sistema de aquisição automática (Raspberry Pi / IoT) e análise de dados dos
-ensaios de **cisalhamento direto** e **compressão triaxial**, para o grupo GeoFluxo (UnB).
+PIBIC 2026 — sistema automatizado de coleta e análise de dados dos ensaios de
+**cisalhamento direto** e **compressão triaxial**, para o grupo GeoFluxo (UnB).
 
-Fluxo: `sensores → Raspberry Pi → MySQL → app desktop Python`.
+Fluxo: `máquina grava arquivo bruto → coleta → parser → banco → cálculo → relatório PDF`.
+
+As máquinas já digitalizam os dados e estão em rede. **Não há Raspberry Pi nem leitura de
+sensores neste projeto** — isso saiu do escopo. Ver `docs/arquitetura/visao-geral.md` §1.
 
 Documento oficial: `docs/plano/PlanoTrabalho-PIBIC_4.md`.
 Estado real e decisões vigentes: `docs/arquitetura/visao-geral.md` — **este prevalece** quando
@@ -16,14 +19,17 @@ divergir do plano.
 - **Unidades:** SI internamente (N, m, Pa, s). Conversão para kPa/mm só na apresentação.
   Toda função que recebe ou devolve grandeza física declara a unidade no docstring.
 - **Ângulos:** radianos internamente; graus apenas na interface e nos relatórios.
-- Cálculos geotécnicos ficam em `src/geotec/nucleo/` e **não** importam nada de GUI, banco
-  ou hardware — são funções puras sobre arrays/DataFrames, para poderem ser testadas.
-- Código que depende do Raspberry Pi fica isolado em `src/geotec/aquisicao/` atrás de uma
-  interface, para que o resto rode no Windows sem o hardware.
+- Cálculos geotécnicos ficam em `src/geotec/nucleo/` e **não** importam nada de GUI ou banco
+  — são funções puras sobre arrays/DataFrames, para poderem ser testadas.
+- Cada máquina/formato ganha seu próprio módulo em `src/geotec/parsers/`. Todos devolvem o
+  **mesmo** formato normalizado (`visao-geral.md` §5), para que nada a jusante saiba de qual
+  máquina o dado veio.
+- Banco: **SQLite no desenvolvimento, MySQL na entrega.** Use SQLAlchemy Core; o código não
+  muda entre os dois, só a string de conexão.
 
 ## Ambiente
 
-`uv` gerencia tudo. Python 3.14 no Windows (dev), Raspberry Pi OS (aquisição).
+`uv` gerencia tudo. Python 3.14, Windows.
 
 ```
 uv sync            uv run pytest            uv run ruff check .
