@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Ambiente / credenciais
+.env
+*.local.toml
+
+# Dados de ensaio (arquivos grandes / brutos nao versionados)
+dados/brutos/*
+dados/processados/*
+!dados/brutos/.gitkeep
+!dados/processados/.gitkeep
+
+# PDFs de referencia (direitos autorais / tamanho)
+referencias/pdfs/*
+!referencias/pdfs/.gitkeep
+
+# Saidas geradas
+figuras/
+*.pdf.bak
+
+# Sistema operacional
+Thumbs.db
+desktop.ini
+.DS_Store
