@@ -1,0 +1,13 @@
+﻿Numero do Teste;906
+ID do ensaio;DMG1CP1SECO
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20,2000008
+Tempo de aquisicao;Log10
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+06/11/2025;10:59:43;Adensamento;0;0;0;20,2000008;0;0;0;0;0;0;0;0;0;0
+06/11/2025;10:59:51;Adensamento;0,116666667;48,624218;2,53752136;17,6624794;12,5619869;0;0;0;0,116666667;0;3600;17,84375;0;-3,265625
+06/11/2025;10:59:59;Adensamento;0,25;49,3054695;2,58332443;17,6166763;12,7887354;0;0;0;0,25;0;3600;18,09375;0;-3,21875
+06/11/2025;11:00:15;Adensamento;0,5;49,560936;2,61248016;17,5875206;12,9330692;0;0;0;0,5;0;3600;18,1875;0;-3,15625
+06/11/2025;11:00:37;Adensamento;0,866666675;49,560936;2,64186859;17,5581322;13,078557;0;0;0;0,866666675;0;3600;18,1875;0;-3,1875

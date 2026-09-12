@@ -1,0 +1,12 @@
+﻿Numero do Teste;323
+ID do ensaio;B5-7D-200KPA
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Log10
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+24/02/2024;17:05:47;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+24/02/2024;17:05:57;Adensamento;0,116666667;196,029694;2,84264755;17,1573524;14,2132387;0;0;0;0,116666667;0;3600;71,9375;0;1,421875
+24/02/2024;17:06:05;Adensamento;0,25;198,499222;2,95135117;17,0486488;14,7567568;0;0;0;0,25;0;3600;72,84375;0;1,359375
+24/02/2024;17:06:14;Adensamento;0,400000006;199,095306;3,02139282;16,9786072;15,1069641;0;0;0;0,400000006;0;3600;73,0625;0;1,328125

@@ -1,0 +1,12 @@
+﻿Numero do Teste;772
+ID do ensaio;D9N3N
+Formato CP;Cilindrico
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+19/05/2025;21:41:39;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+19/05/2025;21:41:44;Adensamento;0,0833333358;298,600586;1,29427719;20,2057228;6,01989412;0;0;0;0,0833333358;0;2827,43286;86,0625;0;-7,125
+19/05/2025;21:41:49;Adensamento;0,166666672;299,793274;1,29595947;20,2040405;6,02771854;0;0;0;0,166666672;0;2827,43286;86,40625;0;-6,96875
+19/05/2025;21:41:54;Adensamento;0,233333334;299,901672;1,2978096;20,2021904;6,03632355;0;0;0;0,233333334;0;2827,43286;86,4375;0;-6,953125

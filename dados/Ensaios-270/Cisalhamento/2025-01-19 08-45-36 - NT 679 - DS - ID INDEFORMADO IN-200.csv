@@ -1,0 +1,11 @@
+﻿Numero do Teste;679
+ID do ensaio;INDEFORMADO IN-200
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+19/01/2025;08:45:36;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+19/01/2025;08:45:43;Adensamento;0,0833333358;197,732819;2,43082809;17,5691719;12,1541405;0;0;0;0,0833333358;0;3600;72,5625;0;1,234375
+19/01/2025;08:45:47;Adensamento;0,150000006;199,095306;2,46021652;17,5397835;12,3010826;0;0;0;0,150000006;0;3600;73,0625;0;1,265625

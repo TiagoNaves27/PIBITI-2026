@@ -1,0 +1,12 @@
+﻿Numero do Teste;807
+ID do ensaio;D1S3
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+23/05/2025;17:31:38;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+23/05/2025;17:31:45;Adensamento;0,0833333358;299,409363;1,88672638;18,1132736;9,4336319;0;0;0;0,0833333358;0;3600;109,875;0;1,609375
+23/05/2025;17:31:50;Adensamento;0,166666672;299,835144;1,89117432;18,1088257;9,45587158;0;0;0;0,166666672;0;3600;110,03125;0;1,640625
+23/05/2025;17:31:55;Adensamento;0,25;299,664856;1,89417267;18,1058273;9,47086334;0;0;0;0,25;0;3600;109,96875;0;1,625

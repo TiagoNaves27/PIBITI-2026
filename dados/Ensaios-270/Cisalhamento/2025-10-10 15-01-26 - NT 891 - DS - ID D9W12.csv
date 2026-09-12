@@ -1,0 +1,15 @@
+﻿Numero do Teste;891
+ID do ensaio;D9W12
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+10/10/2025;15:01:26;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+10/10/2025;15:01:32;Adensamento;0,0833333358;119,729691;1,2383461;20,2616539;5,75974941;0;0;0;0,0833333358;0;3600;43,9375;0;-3,59375
+10/10/2025;15:01:37;Adensamento;0,166666672;119,900002;1,23950958;20,2604904;5,76516104;0;0;0;0,166666672;0;3600;44;0;-3,5625
+10/10/2025;15:01:43;Adensamento;0,25;119,900002;1,24015427;20,2598457;5,76815939;0;0;0;0,25;0;3600;44;0;-3,53125
+10/10/2025;15:01:47;Adensamento;0,333333343;119,900002;1,24079514;20,2592049;5,7711401;0;0;0;0,333333343;0;3600;44;0;-3,484375
+10/10/2025;15:01:52;Adensamento;0,416666657;119,900002;1,24100876;20,2589912;5,77213383;0;0;0;0,416666657;0;3600;44;0;-3,453125
+10/10/2025;15:01:57;Adensamento;0,5;119,900002;1,24125671;20,2587433;5,77328682;0;0;0;0,5;0;3600;44;0;-3,46875

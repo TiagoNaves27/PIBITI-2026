@@ -1,0 +1,13 @@
+﻿Numero do Teste;615
+ID do ensaio;D1N16
+Formato CP;Cilindrico
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+01/10/2024;12:19:56;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+01/10/2024;12:20:01;Adensamento;0,0833333358;21,9017143;0,595874786;20,9041252;2,7715106;0;0;0;0,0833333358;0;2827,43286;6,3125;0;-0,671875
+01/10/2024;12:20:06;Adensamento;0,166666672;22,2269859;0,598766327;20,9012337;2,78495955;0;0;0;0,166666672;0;2827,43286;6,40625;0;-0,65625
+01/10/2024;12:20:11;Adensamento;0,25;22,2269859;0,600078583;20,8999214;2,79106307;0;0;0;0,25;0;2827,43286;6,40625;0;-0,65625
+01/10/2024;12:20:12;Adensamento;0,25;22,3354111;0,600471497;20,8995285;2,79289079;0;0;0;0,25;0;2827,43286;6,4375;0;-0,65625

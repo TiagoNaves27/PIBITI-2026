@@ -1,0 +1,12 @@
+﻿Numero do Teste;724
+ID do ensaio;D7W45N
+Formato CP;Cilindrico
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,75
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+11/05/2025;14:11:11;Adensamento;0;0;0;21,75;0;0;0;0;0;0;0;0;0;0
+11/05/2025;14:11:16;Adensamento;0,0833333358;449,960938;1,10354233;20,6464577;5,07375765;0;0;0;0,0833333358;0;2827,43286;129,6875;0;-1,21875
+11/05/2025;14:11:21;Adensamento;0,166666672;449,852509;1,10432053;20,6456795;5,07733583;0;0;0;0,166666672;0;2827,43286;129,65625;0;-0,875
+11/05/2025;14:11:26;Adensamento;0,25;449,852509;1,10470581;20,6452942;5,07910728;0;0;0;0,25;0;2827,43286;129,65625;0;-0,65625

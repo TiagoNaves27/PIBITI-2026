@@ -1,0 +1,10 @@
+﻿Numero do Teste;239
+ID do ensaio;B2-30D-200KPA
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];42,7000008
+Altura Inicial [mm];12,3500004
+Tempo de aquisicao;Log10
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+21/01/2024;19:20:59;Adensamento;0;17,8225212;9,88816833;2,46183205;80,0661392;0;0;0;0;0;1823,29004;3,3125;0;1,75
+21/01/2024;19:20:59;Adensamento;0;17,8225212;9,88816833;2,46183205;80,0661392;0;0;0;0;0;1823,29004;3,3125;0;1,75

@@ -1,0 +1,12 @@
+﻿Numero do Teste;699
+ID do ensaio;AM06_56D_GAB
+Formato CP;Cilindrico
+N. Estagios Pre-Carregamento;1
+N. Estagios Carregamento;7
+N. Estagios Descarregamento;6
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Estagio;Tensao Normal [kPa];Tempo Estagio [min];Deslocamento Normal [mm];Altura Atual [mm];Deformacao [%];Carga Vertical [kg];Carga Horizontal [kg]
+15/04/2025;12:27:22;Pre-Carregamento;0;0;0;0;20;0;0;0
+15/04/2025;12:27:25;Pre-Carregamento;1;4,66224575;0;0,00196647644;19,9980335;0,0098323822;1,34375;-4,0999999

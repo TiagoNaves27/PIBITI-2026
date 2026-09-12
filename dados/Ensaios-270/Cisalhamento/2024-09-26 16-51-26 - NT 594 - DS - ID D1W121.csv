@@ -1,0 +1,12 @@
+﻿Numero do Teste;594
+ID do ensaio;D1W121
+Formato CP;Cilindrico
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+26/09/2024;16:51:26;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+26/09/2024;16:51:32;Adensamento;0,0833333358;118,50779;1,45688629;20,0431137;6,77621508;0;0;0;0,0833333358;0;2827,43286;34,15625;0;-2,921875
+26/09/2024;16:51:37;Adensamento;0,166666672;119,808876;1,45947266;20,0405273;6,78824472;0;0;0;0,166666672;0;2827,43286;34,53125;0;-2,921875
+26/09/2024;16:51:39;Adensamento;0,183333337;119,808876;1,46009445;20,0399055;6,79113722;0;0;0;0,183333337;0;2827,43286;34,53125;0;-2,9375

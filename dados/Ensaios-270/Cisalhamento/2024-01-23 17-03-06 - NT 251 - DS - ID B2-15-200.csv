@@ -1,0 +1,11 @@
+﻿Numero do Teste;251
+ID do ensaio;B2-15-200
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Log10
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+23/01/2024;17:03:06;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+23/01/2024;17:03:16;Adensamento;0,116666667;198,499222;-0,63860321;20,6386032;-3,19301605;0;0;0;0,116666667;0;3600;72,84375;0;5,3125
+23/01/2024;17:03:23;Adensamento;0,233333334;199,521088;-0,607242584;20,6072426;-3,03621292;0;0;0;0,233333334;0;3600;73,21875;0;5,265625

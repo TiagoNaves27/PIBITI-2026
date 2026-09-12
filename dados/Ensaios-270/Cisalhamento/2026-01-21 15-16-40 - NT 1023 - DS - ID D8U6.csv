@@ -1,0 +1,13 @@
+﻿Numero do Teste;1023
+ID do ensaio;D8U6
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+21/01/2026;15:16:40;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+21/01/2026;15:16:46;Adensamento;0,0833333358;601,288269;1,50624466;19,9937553;7,00578928;0;0;0;0,0833333358;0;3600;220,65625;0;-1,59375
+21/01/2026;15:16:51;Adensamento;0,166666672;600,606995;1,50797272;19,9920273;7,01382637;0;0;0;0,166666672;0;3600;220,40625;0;-1,59375
+21/01/2026;15:16:56;Adensamento;0,25;600,6922;1,51228714;19,9877129;7,03389359;0;0;0;0,25;0;3600;220,4375;0;-1,640625
+21/01/2026;15:16:58;Adensamento;0,283333331;600,436707;1,51323318;19,9867668;7,03829384;0;0;0;0,283333331;0;3600;220,34375;0;-1,671875

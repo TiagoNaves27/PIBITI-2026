@@ -1,0 +1,12 @@
+﻿Numero do Teste;357
+ID do ensaio;DES1.1N1.32
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20,2999992
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+13/05/2024;18:58:26;Adensamento;0;0;0;20,2999992;0;0;0;0;0;0;0;0;0;0
+13/05/2024;18:58:30;Adensamento;0,0833333358;1,27734375;0,013420105;20,2865791;0,0661088973;0;0;0;0,0833333358;0;3600;0,46875;0;0
+13/05/2024;18:58:35;Adensamento;0,166666672;1,27734375;0,014125824;20,2858734;0,0695853457;0;0;0;0,166666672;0;3600;0,46875;0;-0,015625
+13/05/2024;18:58:36;Adensamento;0,183333337;1,36249995;0,0139732361;20,286026;0,068833679;0;0;0;0,183333337;0;3600;0,5;0;0

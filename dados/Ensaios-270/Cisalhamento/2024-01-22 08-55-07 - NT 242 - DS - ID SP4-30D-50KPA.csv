@@ -1,0 +1,10 @@
+﻿Numero do Teste;242
+ID do ensaio;SP4-30D-50KPA
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Log10
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+22/01/2024;08:55:07;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+22/01/2024;08:55:13;Adensamento;0,100000001;49,0499992;0,535606384;19,4643936;2,67803192;0;0;0;0,100000001;0;3600;18;0;-2,5

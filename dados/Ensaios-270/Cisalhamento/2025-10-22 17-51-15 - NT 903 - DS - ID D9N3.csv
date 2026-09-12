@@ -1,0 +1,13 @@
+﻿Numero do Teste;903
+ID do ensaio;D9N3
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];21,5
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+22/10/2025;17:51:15;Adensamento;0;0;0;21,5;0;0;0;0;0;0;0;0;0;0
+22/10/2025;17:51:22;Adensamento;0,0833333358;299,239075;1,53075027;19,9692497;7,11976862;0;0;0;0,0833333358;0;3600;109,8125;0;-2,6875
+22/10/2025;17:51:27;Adensamento;0,166666672;300,175751;1,53191757;19,9680824;7,12519789;0;0;0;0,166666672;0;3600;110,15625;0;-2,671875
+22/10/2025;17:51:32;Adensamento;0,25;299,75;1,53269577;19,9673042;7,12881756;0;0;0;0,25;0;3600;110;0;-2,71875
+22/10/2025;17:51:33;Adensamento;0,266666681;300,005493;1,53282166;19,9671783;7,12940311;0;0;0;0,266666681;0;3600;110,09375;0;-2,6875

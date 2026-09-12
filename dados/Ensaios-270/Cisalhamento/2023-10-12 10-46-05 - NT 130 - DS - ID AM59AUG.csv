@@ -1,0 +1,10 @@
+﻿Numero do Teste;130
+ID do ensaio;AM59AUG
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+12/10/2023;10:46:05;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+12/10/2023;10:46:08;Adensamento;0;0;0,00300216675;19,9969978;0,0150108337;0;0;0;0;0;3600;0;0;0,734375

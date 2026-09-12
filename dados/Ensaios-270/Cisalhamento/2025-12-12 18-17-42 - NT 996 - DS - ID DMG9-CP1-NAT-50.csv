@@ -1,0 +1,16 @@
+﻿Numero do Teste;996
+ID do ensaio;DMG9-CP1-NAT-50
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20,2000008
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+12/12/2025;18:17:42;Adensamento;0;0;0;20,2000008;0;0;0;0;0;0;0;0;0;0
+12/12/2025;18:17:50;Adensamento;0,0833333358;47,9429703;2,89866638;17,3013344;14,3498335;0;0;0;0,0833333358;0,5;3600;17,59375;0;7,84375
+12/12/2025;18:17:55;Adensamento;0,166666672;47,857811;3,20409012;16,9959106;15,8618307;0;0;0;0,166666672;0,5;3600;17,5625;0;4,484375
+12/12/2025;18:18:00;Adensamento;0,25;49,0499992;3,28253937;16,9174614;16,2501945;0;0;0;0,25;0,5;3600;18;0;4,9375
+12/12/2025;18:18:05;Adensamento;0,333333343;49,390625;3,30465698;16,8953438;16,3596878;0;0;0;0,333333343;0,5;3600;18,125;0;5,171875
+12/12/2025;18:18:10;Adensamento;0,416666657;49,3054695;3,3294487;16,8705521;16,48242;0;0;0;0,416666657;0,5;3600;18,09375;0;5,34375
+12/12/2025;18:18:15;Adensamento;0,5;49,4757805;3,34196854;16,8580322;16,5443974;0;0;0;0,5;0,5;3600;18,15625;0;5,015625
+12/12/2025;18:18:17;Adensamento;0,516666651;49,4757805;3,34615326;16,8538475;16,565115;0;0;0;0,516666651;0,5;3600;18,15625;0;5,03125

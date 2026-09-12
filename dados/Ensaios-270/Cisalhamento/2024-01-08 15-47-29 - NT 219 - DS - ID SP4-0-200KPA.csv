@@ -1,0 +1,15 @@
+﻿Numero do Teste;219
+ID do ensaio;SP4-0-200KPA
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+08/01/2024;15:47:29;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+08/01/2024;15:47:37;Adensamento;0,0833333358;199,095306;2,8238678;17,1761322;14,119339;0;0;0;0,0833333358;0;3600;73,0625;0;-1,15625
+08/01/2024;15:47:42;Adensamento;0,166666672;199,861725;2,82927322;17,1707268;14,1463652;0;0;0;0,166666672;0;3600;73,34375;0;-1,1875
+08/01/2024;15:47:47;Adensamento;0,25;199,946869;2,8315506;17,1684494;14,157753;0;0;0;0,25;0;3600;73,375;0;-1,15625
+08/01/2024;15:47:52;Adensamento;0,333333343;199,861725;2,83389664;17,1661034;14,1694822;0;0;0;0,333333343;0;3600;73,34375;0;-1,171875
+08/01/2024;15:47:57;Adensamento;0,416666657;199,861725;2,83499908;17,1650009;14,1749954;0;0;0;0,416666657;0;3600;73,34375;0;-1,140625
+08/01/2024;15:48:01;Adensamento;0,466666669;199,861725;2,83608627;17,1639137;14,1804323;0;0;0;0,466666669;0;3600;73,34375;0;-1,1875

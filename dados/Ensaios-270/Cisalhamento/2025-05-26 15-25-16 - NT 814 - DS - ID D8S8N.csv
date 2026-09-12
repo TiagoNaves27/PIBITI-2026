@@ -1,0 +1,15 @@
+﻿Numero do Teste;814
+ID do ensaio;D8S8N
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+26/05/2025;15:25:16;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+26/05/2025;15:25:22;Adensamento;0,0833333358;399,467987;1,19194794;18,8080521;5,95973969;0;0;0;0,0833333358;0;3600;146,59375;0;-0,671875
+26/05/2025;15:25:27;Adensamento;0,166666672;399,808624;1,19356918;18,8064308;5,96784592;0;0;0;0,166666672;0;3600;146,71875;0;-0,65625
+26/05/2025;15:25:32;Adensamento;0,25;399,893738;1,19355011;18,8064499;5,96775055;0;0;0;0,25;0;3600;146,75;0;-0,609375
+26/05/2025;15:25:37;Adensamento;0,333333343;399,978882;1,19376373;18,8062363;5,96881866;0;0;0;0,333333343;0;3600;146,78125;0;-0,609375
+26/05/2025;15:25:42;Adensamento;0,416666657;398,446106;1,20351028;18,7964897;6,01755142;0;0;0;0,416666657;0;3600;146,21875;0;-0,15625
+26/05/2025;15:25:46;Adensamento;0,466666669;401,596863;1,23523712;18,7647629;6,17618561;0;0;0;0,466666669;0;3600;147,375;0;0

@@ -1,0 +1,13 @@
+﻿Numero do Teste;794
+ID do ensaio;D1W2
+Formato CP;Quadrado
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+22/05/2025;17:59:20;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+22/05/2025;17:59:26;Adensamento;0,0833333358;199,521088;1,29397964;18,7060204;6,46989822;0;0;0;0,0833333358;0;3600;73,21875;0;-3,3125
+22/05/2025;17:59:31;Adensamento;0,166666672;199,861725;1,29627991;18,7037201;6,48139954;0;0;0;0,166666672;0;3600;73,34375;0;-3,125
+22/05/2025;17:59:36;Adensamento;0,25;199,861725;1,29777908;18,7022209;6,48889542;0;0;0;0,25;0;3600;73,34375;0;-3,125
+22/05/2025;17:59:39;Adensamento;0,283333331;199,946869;1,29815292;18,7018471;6,49076462;0;0;0;0,283333331;0;3600;73,375;0;-3,109375

@@ -34,3 +34,6 @@ figuras/
 Thumbs.db
 desktop.ini
 .DS_Store
+
+# Acervo de ensaios: versionado (36 MB, fonte primaria, nao editar)
+!dados/Ensaios-270/
