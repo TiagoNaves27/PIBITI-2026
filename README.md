@@ -1,4 +1,4 @@
-# PIBIC 2026 — Aquisição (IoT) e análise de ensaios de cisalhamento direto e triaxial
+# PIBITI 2026 — Aquisição (IoT) e análise de ensaios de cisalhamento direto e triaxial
 
 Sistema automatizado de coleta e análise de dados dos ensaios de cisalhamento direto e
 compressão triaxial. As máquinas do laboratório já gravam os dados; o sistema os traduz,
@@ -14,7 +14,7 @@ armazena, calcula os parâmetros de resistência e gera um relatório.
 | [`docs/arquitetura/visao-geral.md`](docs/arquitetura/visao-geral.md) | **estado real** do projeto — vale sobre o plano |
 | [`docs/plano/metas-semanais.md`](docs/plano/metas-semanais.md) | o que fazer nesta semana (2h) |
 | [`docs/plano/roteiro-estudos.md`](docs/plano/roteiro-estudos.md) | o que estudar e quando |
-| [`docs/plano/PlanoTrabalho-PIBIC_4.md`](docs/plano/PlanoTrabalho-PIBIC_4.md) | documento submetido ao PIBIC (histórico) |
+| [`docs/plano/PlanoTrabalho-PIBITI_4.md`](docs/plano/PlanoTrabalho-PIBITI_4.md) | documento submetido ao PIBITI (histórico) |
 
 > ⚠️ O plano de trabalho previa aquisição via Raspberry Pi. Isso **saiu do escopo**: as
 > máquinas já digitalizam os dados. Ver `visao-geral.md` §1.

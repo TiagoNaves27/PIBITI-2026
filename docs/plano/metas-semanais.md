@@ -124,7 +124,7 @@ preencha. Esse arquivo é o que você manda para o orientador.
 
 ## Fase 6 — Escrita (8 semanas · 16h) + 4 semanas de folga
 
-- **Semanas 37–38** — Relatório de acompanhamento do PIBIC
+- **Semanas 37–38** — Relatório de acompanhamento do PIBITI
 - **Semanas 39–44** — Artigo científico (uma seção por semana: métodos → resultados →
   discussão → introdução → conclusão → revisão)
 - **Semanas 45–46** — Slides e apresentação
@@ -138,7 +138,7 @@ A 2h/semana, atrasos são certos. Ordem de corte, do primeiro a ser sacrificado 
 
 1. GUI desktop — já está fora
 2. Triaxial (semanas 18–19) — entregar **só o cisalhamento direto**, completo e validado,
-   é um PIBIC melhor do que os dois pela metade
+   é um PIBITI melhor do que os dois pela metade
 3. MySQL — ficar em SQLite e justificar a escolha no relatório
 4. Círculos de Mohr — a envoltória já entrega c e φ
 

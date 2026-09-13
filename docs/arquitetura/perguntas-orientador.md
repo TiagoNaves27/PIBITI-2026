@@ -47,7 +47,7 @@ repreguntar. Leia a Parte 2 antes de entrar; use só a Parte 1 lá dentro.
 ## Q5 · Permissão de uso
 
 > "Esses ensaios são de outras pessoas do grupo — vi IDs do Augusto, do Gabriel, do Paulo.
-> Posso usar no meu PIBIC e no artigo? Como devo creditar? A campanha de 2026, que varia a
+> Posso usar no meu PIBITI e no artigo? Como devo creditar? A campanha de 2026, que varia a
 > velocidade de cisalhamento, é pesquisa de alguém que ainda está em andamento?"
 
 ## Q6 · Material de validação

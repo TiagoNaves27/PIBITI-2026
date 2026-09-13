@@ -3,7 +3,7 @@
 _Última atualização: 11/09/2026_
 
 Este documento descreve o **estado real** do projeto. O plano de trabalho
-(`docs/plano/PlanoTrabalho-PIBIC_4.md`) é o documento submetido ao PIBIC e já divergiu do
+(`docs/plano/PlanoTrabalho-PIBITI_4.md`) é o documento submetido ao PIBITI e já divergiu do
 que será feito. **Quando houver conflito, este documento vale.**
 
 ---

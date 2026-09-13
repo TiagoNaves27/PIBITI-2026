@@ -1,6 +1,6 @@
 # Contexto do projeto
 
-PIBIC 2026 — sistema automatizado de coleta e análise de dados dos ensaios de
+PIBITI 2026 — sistema automatizado de coleta e análise de dados dos ensaios de
 **cisalhamento direto** e **compressão triaxial**, para o grupo GeoFluxo (UnB).
 
 Fluxo: `máquina grava arquivo bruto → coleta → parser → banco → cálculo → relatório PDF`.
@@ -8,7 +8,7 @@ Fluxo: `máquina grava arquivo bruto → coleta → parser → banco → cálcul
 As máquinas já digitalizam os dados e estão em rede. **Não há Raspberry Pi nem leitura de
 sensores neste projeto** — isso saiu do escopo. Ver `docs/arquitetura/visao-geral.md` §1.
 
-Documento oficial: `docs/plano/PlanoTrabalho-PIBIC_4.md`.
+Documento oficial: `docs/plano/PlanoTrabalho-PIBITI_4.md`.
 Estado real e decisões vigentes: `docs/arquitetura/visao-geral.md` — **este prevalece** quando
 divergir do plano.
 
