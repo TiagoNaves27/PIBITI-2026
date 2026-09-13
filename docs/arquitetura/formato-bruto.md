@@ -15,6 +15,27 @@ Período: **maio/2023 a agosto/2026**. Nenhum ensaio triaxial ainda.
 
 Nome do arquivo: `AAAA-MM-DD HH-MM-SS - NT <n> - <tipo> - ID <id>.csv`
 (`NT` = número do teste, sequencial e único; `DS` / `ODC` = tipo de ensaio).
+O tipo do ensaio **só existe no nome** — nenhuma linha de dentro do arquivo o registra.
+
+### 1.1 São dois layouts, não um
+
+`DS` e `DSS` gravam exatamente a mesma estrutura, descrita no §2. **`ODC` grava outra**, e a
+diferença é silenciosa — um leitor de DS apontado para um ODC não dá erro, lê errado:
+
+| | `DS` / `DSS` (1.045) | `ODC` (36) |
+| --- | --- | --- |
+| Linhas de metadados | 7 | **8** |
+| Nomes de coluna | linha 8 | **linha 9** |
+| Chaves 4 a 7 | `Tipo de Controle`, `Dimensao Secao`, `Altura Inicial`, `Tempo de aquisicao` | `N. Estagios Pre-Carregamento`, `N. Estagios Carregamento`, `N. Estagios Descarregamento`, `Dimensao Secao` |
+| Valores de `Etapa` | `Adensamento`, `Cisalhamento` | `Pre-Carregamento`, `Carregamento`, `Descarregamento` |
+
+Lido como se fosse DS, o ODC toma a linha `Altura Inicial [mm];20` como sendo a linha de
+nomes de coluna, e o resultado é um DataFrame de duas colunas com nome de coluna absurdo —
+não uma exceção. Por isso `parsers/direto.py` confere as chaves do cabeçalho e os nomes das
+17 colunas antes de converter qualquer número, e recusa o ODC pelo tipo no nome.
+
+Quando o adensamento entrar no escopo, ele ganha `parsers/adensamento.py`, com este §1.1
+como ponto de partida.
 
 ## 2. Estrutura do arquivo (cisalhamento direto)
 
