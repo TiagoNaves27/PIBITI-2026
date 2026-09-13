@@ -19,19 +19,27 @@ Quem mantém: você. Artefato novo entra aqui com o link e uma linha do que ele 
   atrasar, e cinco barras de progresso por tipo de trabalho — laboratório, estudo,
   programação, análise e escrita — para separar o que está andando do que está parado.
 
+  Tem duas abas. **Agora** é o mês corrente em detalhe, dia a dia, com os compromissos de
+  calendário que o plano das 48 semanas não conhece — reunião, prova, Semana Universitária.
+  **O ano inteiro** é o painel das 48 semanas. As duas compartilham o mesmo estado: item da
+  aba Agora que corresponde a uma tarefa do ano marca nos dois lugares, porque é uma
+  marcação só.
+
   **Ele é atualizado sempre que alguma coisa fica pronta**, na mesma sessão em que ficar.
   Só se marca o que o repositório prova: código, teste, documento ou commit. Estudo e
   conversa com o laboratório não deixam rastro aqui, então essas você marca.
-
-- <https://claude.ai/code/artifact/364f48f1-a2db-4fa3-b50c-f38fb7e9302a>
-  **Próximas quatro semanas** — o plano de 14/09 a 11/10 em detalhe: o que fazer em cada
-  semana, com que horas, mais as três perguntas da reunião de 16/09 e os quatro alvos de
-  11/10. Substitui o planejamento de 02/09.
 
 - <https://claude.ai/code/artifact/04f0da7c-37d6-48e5-ae04-a31ce173001b>
   **Roteiro da reunião** — as seis perguntas para o orientador, cada uma com a fala pronta e
   um "por que importa" que abre com o contexto e os números. **Tem campo para anotar a
   resposta dele na hora, e o que você digita fica salvo.** Leve aberto na reunião.
+
+## Apagados
+
+- **Próximas quatro semanas** (13/09/2026) — plano de 14/09 a 11/10 numa página separada.
+  Apagado em 13/09: virou a aba **Agora** da Bancada. Como página solta ele envelhecia sem
+  avisar — foi publicado ainda mandando escrever o parser, que estava pronto desde 12/09.
+  Dentro da Bancada ele divide o estado com o painel do ano e não tem como divergir dele.
 
 ## Anteriores à mudança de escopo
 
