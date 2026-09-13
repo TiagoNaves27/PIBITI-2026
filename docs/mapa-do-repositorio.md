@@ -19,6 +19,7 @@ pasta por pasta.
 | o **relatório semanal** para o orientador | [`docs/diario/`](diario/) — copie o `MODELO.md` |
 | o documento **submetido ao PIBITI** | [`docs/plano/PlanoTrabalho-PIBITI_4.md`](plano/PlanoTrabalho-PIBITI_4.md) |
 | o **script** que gerou um número citado | [`scripts/`](../scripts) |
+| o **link** de uma página publicada (Bancada, roteiro da reunião) | [`docs/links/README.md`](links/README.md) |
 
 O [`README.md`](../README.md) da raiz já traz os quatro primeiros como tabela de links — é o
 primeiro lugar para abrir quando a memória falhar.
@@ -26,22 +27,10 @@ primeiro lugar para abrir quando a memória falhar.
 ## O que não está em pasta nenhuma
 
 Algumas páginas do projeto são **Artifacts**: HTML publicado e hospedado no claude.ai, com
-link próprio. Não são arquivos deste repositório e procurar por elas nas pastas não acha —
-por isso ficam registradas aqui.
+link próprio. Não são arquivos deste repositório e procurar por elas nas pastas não acha.
 
-| Página | Publicada em |
-| --- | --- |
-| [Próximas quatro semanas](https://claude.ai/code/artifact/364f48f1-a2db-4fa3-b50c-f38fb7e9302a) — plano de 14/09 a 11/10, reunião e alvos | 13/09/2026 |
-| [Bancada PIBITI](https://claude.ai/code/artifact/46ec1a79-dc82-4ada-8fce-fa185a9cf4a3) — o painel das 48 semanas | 13/09/2026 |
-| [Roteiro da reunião](https://claude.ai/code/artifact/04f0da7c-37d6-48e5-ae04-a31ce173001b) | 12/09/2026 |
-| [Do ensaio ao gráfico](https://claude.ai/code/artifact/7167a3d4-3f87-44a4-9966-7b8561513691) | 02/09/2026 |
-| [PIBITI Cisalhamento IoT](https://claude.ai/code/artifact/3c11e075-5d13-47a7-99d5-ef4b44b2c76c) | 02/09/2026 |
-
-Para listar todos sem sair do terminal: `/artifacts`. A galeria completa fica em
-<https://claude.ai/code/artifacts>.
-
-O conteúdo dessas páginas é derivado dos documentos de `docs/` — quando as duas coisas
-divergirem, o repositório é que vale.
+Os links de todas elas, com o que cada uma é, ficam em
+[`docs/links/README.md`](links/README.md) — uma lista só, para não haver duas que divirjam.
 
 ## As pastas, uma a uma
 
@@ -68,6 +57,8 @@ Dividida por finalidade, não por assunto:
   `figuras/`, geradas por script.
 - **`diario/`** — o que se fez em cada semana, cronológico, para o orientador. Copie
   `MODELO.md` para `AAAA-MM-DD.md` no fim de cada semana.
+- **`links/`** — o índice dos Artifacts: os links das páginas hospedadas, com uma linha
+  sobre cada uma.
 - **`glossario.md`** — os termos já explicados, com o exemplo concreto do projeto onde cada
   um apareceu.
 - **`relatorios/`** e **`artigo/`** — vazias por enquanto, reservadas para as saídas finais.

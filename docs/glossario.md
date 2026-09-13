@@ -185,4 +185,4 @@ Não é arquivo do repositório: não aparece no `git status`, não está em pas
 computador e procurar por ela no Desktop não acha. Listar todas: `/artifacts` no terminal,
 ou <https://claude.ai/code/artifacts> no navegador.
 **Aqui:** a *Bancada PIBITI* e o plano das *Próximas quatro semanas* são Artifacts. Os links
-estão em `docs/mapa-do-repositorio.md`.
+de todos eles estão em `docs/links/README.md`.

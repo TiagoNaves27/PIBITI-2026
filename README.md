@@ -16,6 +16,7 @@ armazena, calcula os parâmetros de resistência e gera um relatório.
 | [`docs/plano/roteiro-estudos.md`](docs/plano/roteiro-estudos.md) | o que estudar e quando |
 | [`docs/plano/PlanoTrabalho-PIBITI_4.md`](docs/plano/PlanoTrabalho-PIBITI_4.md) | documento submetido ao PIBITI (histórico) |
 | [`docs/mapa-do-repositorio.md`](docs/mapa-do-repositorio.md) | onde cada coisa mora — tour pelas pastas |
+| [`docs/links/README.md`](docs/links/README.md) | links das páginas publicadas (Artifacts) |
 
 > ⚠️ O plano de trabalho previa aquisição via Raspberry Pi. Isso **saiu do escopo**: as
 > máquinas já digitalizam os dados. Ver `visao-geral.md` §1.
