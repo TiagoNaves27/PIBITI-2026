@@ -105,10 +105,12 @@ olhar quem foram os 44 que saíram — é a base do artigo mudando.
 Defeito em que o código **não dá erro**, não avisa nada, e mesmo assim produz resultado
 errado. É a pior categoria, porque nada chama a sua atenção — o número sai com cara de
 certo e segue para o relatório.
-**Aqui:** ler um arquivo `ODC` como se fosse `DS`. Não levanta exceção; toma a linha
-`Altura Inicial [mm];20` como sendo a linha de nomes de coluna e devolve uma tabela sem
-sentido. É por isso que `parsers/direto.py` confere as chaves do cabeçalho e os 17 nomes de
-coluna antes de converter qualquer número.
+**Aqui:** ler o diâmetro do corpo de prova pela **posição** da linha, em vez de pela chave.
+No arquivo `DS` a linha 5 é `Dimensao Secao [mm];50`; no `ODC` a linha 5 é
+`N. Estagios Carregamento;5`. Um leitor posicional apontado para o arquivo errado devolve um
+corpo de prova de **5 mm** em vez de 50, sem erro nenhum, e a área — que entra em toda
+tensão calculada — sai cem vezes menor. É por isso que `parsers/direto.py` procura cada
+metadado **pelo nome da chave** e confere que as sete chaves são exatamente as esperadas.
 
 ---
 

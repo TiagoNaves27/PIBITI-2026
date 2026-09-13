@@ -19,20 +19,28 @@ O tipo do ensaio **só existe no nome** — nenhuma linha de dentro do arquivo o
 
 ### 1.1 São dois layouts, não um
 
-`DS` e `DSS` gravam exatamente a mesma estrutura, descrita no §2. **`ODC` grava outra**, e a
-diferença é silenciosa — um leitor de DS apontado para um ODC não dá erro, lê errado:
+`DS` e `DSS` gravam exatamente a mesma estrutura, descrita no §2. **`ODC` grava outra:**
 
 | | `DS` / `DSS` (1.045) | `ODC` (36) |
 | --- | --- | --- |
-| Linhas de metadados | 7 | **8** |
-| Nomes de coluna | linha 8 | **linha 9** |
+| Linhas de metadados | 7 | **9** |
+| Nomes de coluna | linha 8 | **linha 10** |
+| Colunas de dados | 17 | **11** |
 | Chaves 4 a 7 | `Tipo de Controle`, `Dimensao Secao`, `Altura Inicial`, `Tempo de aquisicao` | `N. Estagios Pre-Carregamento`, `N. Estagios Carregamento`, `N. Estagios Descarregamento`, `Dimensao Secao` |
+| Coluna 4 | `Tempo Etapa [min]` | `Estagio` |
 | Valores de `Etapa` | `Adensamento`, `Cisalhamento` | `Pre-Carregamento`, `Carregamento`, `Descarregamento` |
 
-Lido como se fosse DS, o ODC toma a linha `Altura Inicial [mm];20` como sendo a linha de
-nomes de coluna, e o resultado é um DataFrame de duas colunas com nome de coluna absurdo —
-não uma exceção. Por isso `parsers/direto.py` confere as chaves do cabeçalho e os nomes das
-17 colunas antes de converter qualquer número, e recusa o ODC pelo tipo no nome.
+**O tipo do ensaio não aparece em nenhuma linha do conteúdo** — só no nome do arquivo. Um
+leitor de DS apontado para um ODC falha de três jeitos diferentes, nenhum deles dizendo que o
+arquivo é de outro tipo; os três estão medidos em
+`docs/registros/2026-09-13-dois-layouts.md`. É por isso que `parsers/direto.py` confere as
+chaves do cabeçalho e os 17 nomes de coluna antes de converter qualquer número, e recusa o
+ODC pelo tipo no nome.
+
+> Até 13/09/2026 esta tabela dizia 8 linhas de metadados e colunas na linha 9, e afirmava que
+> ler um ODC como DS "não dá erro". As duas coisas estavam erradas: são 9 e 10, e o pandas
+> levanta `ParserError`. Corrigido quando `scripts/comparar_layouts.py` passou a medir isso
+> em vez de supor.
 
 Quando o adensamento entrar no escopo, ele ganha `parsers/adensamento.py`, com este §1.1
 como ponto de partida.
@@ -210,9 +218,19 @@ desloc: 28,3  28,0  28,0     3,7    28,3   27,5   28,2   29,0   mm
                           ^^^^^^ interrompido; esperado ~133 kPa
 ```
 
-O ponto de 160 kPa dessa série **não existe**: o NT 608 travou, e a repetição do dia
-seguinte (NT 617, 01/10/2024) também foi interrompida cedo — parou em 1,90 mm com τ = 83
-kPa, ainda subindo. A série vai para a regressão com 7 pontos, não 8.
+O NT 608 travou, então esse ponto de 160 kPa não serve. **Mas ele pode não estar perdido:**
+no dia seguinte, 01/10/2024, há três ensaios com o mesmo `ID D1N16` a 160 kPa — o NT 616
+(157,0 kPa em 27,9 mm), o NT 618 (121,6 kPa em 28,0 mm) e o NT 617, que parou em 1,9 mm com
+83,1 kPa. Os dois primeiros romperam normalmente e cercam o valor esperado de ~133 kPa.
+
+Se algum deles pode entrar na envoltória do dia anterior depende da regra de agrupamento
+(Q1): uma série pode atravessar dois dias? Enquanto isso não for respondido, não dá para
+dizer se essa série vai à regressão com 7 ou com 8 pontos.
+
+> Até 13/09/2026 esta seção afirmava que o ponto de 160 kPa "não existe" e que a repetição
+> do dia seguinte também tinha sido interrompida. Isso citava só o NT 617 e deixava de fora
+> o NT 616 e o NT 618, que romperam. Corrigido ao escrever
+> `docs/registros/2026-09-12-ensaios-travados.md`.
 
 ### 5.3 Por que "τ alto" não serve como critério
 
@@ -243,8 +261,12 @@ Descartar da envoltória, sempre registrando o motivo:
 3. **τ de pico no último ponto registrado E deslocamento final < 5 mm** — o ensaio não rompeu.
 
 A terceira condição precisa dos **dois** testes juntos. "Pico no último ponto" sozinho pega
-471 dos 914 ensaios, porque muito solo endurece até o fim do curso sem pico definido;
+421 dos 914 ensaios, porque muito solo endurece até o fim do curso sem pico definido;
 combinado com o deslocamento curto, sobram 9 ensaios, que são os que merecem olhar humano.
+
+> Este número dizia 471 até 13/09/2026, quando `scripts/ensaios_nao_rompidos.py` passou a
+> recalculá-lo a partir dos arquivos. São 421. Os demais números desta seção — 13, 9, 3 e a
+> tabela dos travados — foram conferidos pelo mesmo script e estão corretos.
 
 Sinais adicionais para **sinalizar sem descartar** (marcar para revisão):
 

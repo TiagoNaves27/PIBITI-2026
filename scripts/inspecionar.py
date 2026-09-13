@@ -34,9 +34,10 @@ def detectar_codificacao(caminho: Path) -> tuple[str, list[str]]:
 
 
 def eh_binario(caminho: Path) -> bool:
-    return b"\x00" in caminho.read_bytes()[:4096].replace(b"\xff\xfe", b"").replace(
-        b"\xfe\xff", b""
-    )[:1024]
+    return (
+        b"\x00"
+        in caminho.read_bytes()[:4096].replace(b"\xff\xfe", b"").replace(b"\xfe\xff", b"")[:1024]
+    )
 
 
 def detectar_separador(linhas: list[str]) -> tuple[str | None, int]:

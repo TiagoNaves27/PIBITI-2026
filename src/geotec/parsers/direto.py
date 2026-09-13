@@ -9,9 +9,9 @@ secao 2, e e identico nos 1.043 arquivos DS do acervo: UTF-8 com BOM, campos
 separados por ';', decimal com virgula, 7 linhas de metadados no formato
 `chave;valor`, nomes de coluna na linha 8 e dados a partir da linha 9.
 
-Os arquivos de adensamento (tipo ODC) tem OUTRO layout -- 8 linhas de cabecalho
-e outras chaves -- e por isso sao recusados aqui em vez de lidos errado. Quando
-houver necessidade, eles ganham o proprio modulo.
+Os arquivos de adensamento (tipo ODC) tem OUTRO layout -- 9 linhas de cabecalho,
+outras chaves e uma coluna `Estagio` -- e por isso sao recusados aqui em vez de
+lidos errado. Quando houver necessidade, eles ganham o proprio modulo.
 
 Uso:
     from geotec.parsers import direto
@@ -191,8 +191,8 @@ def _nome(caminho: Path) -> dict[str, str]:
     if partes["tipo"] not in TIPOS_SUPORTADOS:
         raise ErroDeFormato(
             f"{caminho.name}: tipo '{partes['tipo']}' nao e cisalhamento direto. "
-            "Arquivos ODC (adensamento) tem outro layout -- 8 linhas de cabecalho e "
-            "outras chaves -- e precisam do proprio parser."
+            "Arquivos ODC (adensamento) tem outro layout -- 9 linhas de cabecalho, "
+            "outras chaves e uma coluna `Estagio` -- e precisam do proprio parser."
         )
     return partes
 

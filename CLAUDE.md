@@ -73,8 +73,8 @@ Nunca commitar `.env`, dados brutos de ensaio ou PDFs de referência.
 - **Vira registro:** um número que vai ter que ser defendido; uma decisão com alternativa
   descartada; algo que o processamento manual não pegaria; uma surpresa que contrariou o
   que se supunha.
-- **Não vira registro:** trabalho de rotina. "Escrevi o parser" não; "descobri que ler um
-  ODC como DS não levanta erro nenhum" sim.
+- **Não vira registro:** trabalho de rotina. "Escrevi o parser" não; "descobri que as
+  máquinas gravam dois layouts e nenhuma forma de ler avisa quando você errou o tipo" sim.
 - **Todo número citado vem de script versionado em `scripts/`**, que reproduz o valor. Número
   que só existe porque alguém rodou algo uma vez não entra.
 - **Figura gerada por script**, em `docs/registros/figuras/`, com a paleta acima. Nunca print

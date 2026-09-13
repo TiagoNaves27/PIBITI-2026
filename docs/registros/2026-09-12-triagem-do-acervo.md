@@ -60,34 +60,6 @@ mais antigas do acervo, e têm `ID do ensaio = MOVIMENTO`.
 curva nenhuma em quatro pontos. O identificador `MOVIMENTO` e a data mais antiga do acervo
 sugerem teste de equipamento — sugerem, não provam.
 
-## Por que isso importa
-
-**Para o artigo.** A seção de métodos vai dizer "foram utilizados 914 ensaios". A pergunta
-seguinte de qualquer leitor é "e os outros 129?". Com a tabela acima, a resposta é
-verificável e mostra que o acervo é melhor do que o número bruto sugeria. Sem ela, a resposta
-seria "o sistema descartou", que não é resposta.
-
-**Para o projeto.** A descrição anterior sugeria um acervo com quase 13% de perda. Pelos
-critérios aplicados aqui, a perda é de 2%. Isso muda a decisão de basear um ano de pesquisa
-neste acervo.
-
-**Para o desenho do sistema.** Esta foi a descoberta que determinou como o banco de dados
-guarda a triagem. Um campo `valido` verdadeiro/falso registraria os 108 exatamente como
-registraria os 17 — apagando a única distinção que importa. Por isso o modelo tem uma tabela
-`ocorrencia` que guarda **o motivo**, não um sim/não.
-
-## O que eu decidi
-
-**Registrar o motivo de cada descarte, individualmente.** Quatro situações nomeadas, não um
-booleano.
-
-A alternativa descartada era o campo `valido` — mais simples de programar e de consultar. Foi
-rejeitada porque perde a informação que responde ao leitor, e porque impediria o sistema de
-distinguir "há um arquivo irmão com a etapa que falta" de "este ensaio se perdeu".
-
-Consequência assumida: toda etapa a jusante precisa saber lidar com quatro valores em vez de
-dois, e a interface tem que mostrar o motivo em algum lugar.
-
 ## Como conferir
 
 Os números deste registro não precisam ser aceitos por confiança — eles são recalculados a
@@ -139,6 +111,34 @@ A figura no topo da página não foi desenhada à mão: ela é gerada por este c
 a mesma função de triagem do comando 1. Por isso ela não tem como divergir do texto — se o
 critério mudar, os dois mudam juntos. O arquivo é sobrescrito em
 `docs/registros/figuras/triagem-do-acervo.png`.
+
+## Por que isso importa
+
+**Para o artigo.** A seção de métodos vai dizer "foram utilizados 914 ensaios". A pergunta
+seguinte de qualquer leitor é "e os outros 129?". Com a tabela acima, a resposta é
+verificável e mostra que o acervo é melhor do que o número bruto sugeria. Sem ela, a resposta
+seria "o sistema descartou", que não é resposta.
+
+**Para o projeto.** A descrição anterior sugeria um acervo com quase 13% de perda. Pelos
+critérios aplicados aqui, a perda é de 2%. Isso muda a decisão de basear um ano de pesquisa
+neste acervo.
+
+**Para o desenho do sistema.** Esta foi a descoberta que determinou como o banco de dados
+guarda a triagem. Um campo `valido` verdadeiro/falso registraria os 108 exatamente como
+registraria os 17 — apagando a única distinção que importa. Por isso o modelo tem uma tabela
+`ocorrencia` que guarda **o motivo**, não um sim/não.
+
+## O que eu decidi
+
+**Registrar o motivo de cada descarte, individualmente.** Quatro situações nomeadas, não um
+booleano.
+
+A alternativa descartada era o campo `valido` — mais simples de programar e de consultar. Foi
+rejeitada porque perde a informação que responde ao leitor, e porque impediria o sistema de
+distinguir "há um arquivo irmão com a etapa que falta" de "este ensaio se perdeu".
+
+Consequência assumida: toda etapa a jusante precisa saber lidar com quatro valores em vez de
+dois, e a interface tem que mostrar o motivo em algum lugar.
 
 ## Ligações
 

@@ -8,8 +8,9 @@ Serve para três coisas, nesta ordem de importância:
 1. **Guardar o porquê.** Daqui a seis meses, na hora de escrever o artigo ou de responder a
    um professor, o "o que foi feito" está no código e o "por que foi feito assim" não está
    em lugar nenhum — a menos que alguém escreva.
-2. **Virar apresentação.** Cada registro tem uma frase, uma figura e um punhado de
-   consequências. Um slide sai quase por recorte.
+2. **Virar apresentação.** Cada registro tem uma frase e um punhado de consequências — e uma
+   figura, quando houver número que se enxergue melhor desenhado. Um slide sai quase por
+   recorte.
 3. **Deixar o número conferível.** Todo número citado num registro vem de um script
    versionado em `scripts/`, que qualquer pessoa pode rodar de novo.
 
@@ -36,8 +37,13 @@ Serve para três coisas, nesta ordem de importância:
   como está e nasce um novo explicando a mudança. A pasta é um histórico, não uma
   enciclopédia — mostrar que o projeto errou e corrigiu é parte do que se quer mostrar.
 
-O gabarito de cada arquivo: a frase · o que aconteceu · a evidência · por que importa · o
-que eu decidi · como conferir · ligações · o que ficou em aberto.
+O gabarito de cada arquivo, nesta ordem:
+
+> **a frase** · **o que aconteceu** · **a evidência** · **como conferir** · **por que
+> importa** · **o que eu decidi** · **ligações** · **o que ficou em aberto**
+
+"Como conferir" vem logo depois da evidência, não no fim: é ele que sustenta a evidência, e
+quem duvidar do número vai querer o comando antes de ler as conclusões tiradas dele.
 
 ## O que não entra aqui
 
@@ -51,6 +57,24 @@ que eu decidi · como conferir · ligações · o que ficou em aberto.
 
 ## Os registros
 
+Do mais recente para o mais antigo.
+
 | Data | Registro |
 | --- | --- |
+| 13/09/2026 | [As máquinas gravam dois layouts com a mesma extensão, e nenhuma forma de ler avisa quando você erra o tipo](2026-09-13-dois-layouts.md) |
+| 12/09/2026 | [O ensaio com a maior razão τ/σ do acervo é um dos bons — a magnitude não separa nada](2026-09-12-forma-da-curva.md) |
+| 12/09/2026 | [Três ensaios registraram resistência altíssima sem nunca romper — e a conferência manual não teria como perceber](2026-09-12-ensaios-travados.md) |
+| 12/09/2026 | [O identificador do ensaio parece dizer a tensão normal — e em seis casos ele mente](2026-09-12-id-nao-e-dado.md) |
 | 12/09/2026 | [O acervo tem 914 ensaios utilizáveis — e a maior parte do descarte não é ensaio perdido](2026-09-12-triagem-do-acervo.md) |
+| 12/09/2026 | [O projeto deixou de ser instrumentação e virou engenharia de dados](2026-09-12-mudanca-de-escopo.md) |
+
+## Os scripts por trás dos números
+
+| Script | O que calcula |
+| --- | --- |
+| `scripts/triagem_acervo.py` | as quatro situações do acervo: 914, 108, 17, 4 |
+| `scripts/ensaios_nao_rompidos.py` | os ensaios que não romperam: 13, 421, 9, 3 |
+| `scripts/razao_tau_sigma.py` | a razão τ/σ de cada ensaio: 211, 106, 105 |
+| `scripts/id_versus_sigma.py` | identificadores repetidos com σ divergente: 748, 96, 6 |
+| `scripts/comparar_layouts.py` | os dois layouts e os três modos de falha |
+| `scripts/figura_*.py` | as figuras, a partir dos scripts acima |
