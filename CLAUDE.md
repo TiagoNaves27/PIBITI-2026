@@ -64,3 +64,26 @@ Nunca commitar `.env`, dados brutos de ensaio ou PDFs de referência.
 - Cada função de cálculo novo precisa de teste com valor de referência conferido à mão
   ou vindo de exemplo de norma/livro (ASTM, Head, Pinto, Das).
 - Ao mudar escopo/arquitetura, atualizar `docs/arquitetura/visao-geral.md` no mesmo passo.
+
+## Explicar, não só entregar
+
+**É a primeira vez que o aluno faz um projeto assim.** Programação, versionamento, linha de
+comando e o vocabulário que vem junto são todos novos. Ele acompanha bem quando o porquê vem
+junto — o que falta é vocabulário, não capacidade. Não presuma que um termo é conhecido só
+porque é básico para quem já programa.
+
+- **Todo termo técnico ganha uma explicação curta na primeira vez que aparece.** Vale para
+  jargão de código (*parser*, *fixture*, *dataclass*, *lint*, *regex*, *BOM*, *LF/CRLF*),
+  de Git (*commit*, *branch*, *remote*, *staged*) e de estatística (*R²*, *regressão*,
+  *resíduo*). Uma frase basta — não vire aula, não interrompa o trabalho.
+- **Todo comando vem com o que ele faz e como saber se deu certo.** Não `git add -A` solto,
+  mas o que ele marca e o que a tela deve mostrar depois. Ele precisa distinguir sucesso de
+  erro sozinho.
+- **Ao propor uma decisão técnica, diga a alternativa e o que se perde com ela.** Uma escolha
+  sem alternativa declarada não ensina nada e não pode ser contestada.
+- Se a explicação passar de dois parágrafos, ela vira arquivo em `docs/` — não some no
+  terminal junto com o resto da sessão.
+- Perguntar "quer que eu explique X?" é pior do que explicar X em uma frase e seguir em
+  frente. Ele não sabe ainda se precisa de X.
+- Nomear o que está acontecendo vale mais que suavizar: dizer "isso é uma falha silenciosa,
+  o código não dá erro e produz número errado" ensina; dizer "tive um probleminha" não.
