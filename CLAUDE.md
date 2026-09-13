@@ -65,6 +65,23 @@ Nunca commitar `.env`, dados brutos de ensaio ou PDFs de referência.
   ou vindo de exemplo de norma/livro (ASTM, Head, Pinto, Das).
 - Ao mudar escopo/arquitetura, atualizar `docs/arquitetura/visao-geral.md` no mesmo passo.
 
+## Registros
+
+`docs/registros/` guarda um arquivo por momento que vale contar. Regras completas no
+`README.md` de lá; o essencial:
+
+- **Vira registro:** um número que vai ter que ser defendido; uma decisão com alternativa
+  descartada; algo que o processamento manual não pegaria; uma surpresa que contrariou o
+  que se supunha.
+- **Não vira registro:** trabalho de rotina. "Escrevi o parser" não; "descobri que ler um
+  ODC como DS não levanta erro nenhum" sim.
+- **Todo número citado vem de script versionado em `scripts/`**, que reproduz o valor. Número
+  que só existe porque alguém rodou algo uma vez não entra.
+- **Figura gerada por script**, em `docs/registros/figuras/`, com a paleta acima. Nunca print
+  de tela — não se regenera quando o dado muda e não tem resolução para projetor.
+- **Registro não se corrige por cima.** Número que mudar gera registro novo explicando a
+  mudança; o antigo fica.
+
 ## Explicar, não só entregar
 
 **É a primeira vez que o aluno faz um projeto assim.** Programação, versionamento, linha de
