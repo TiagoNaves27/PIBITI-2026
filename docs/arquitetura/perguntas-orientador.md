@@ -8,6 +8,80 @@ repreguntar. Leia a Parte 2 antes de entrar; use só a Parte 1 lá dentro.
 
 ---
 
+# PARTE 0 · Mensagem para mandar antes
+
+Versão curta das sete perguntas, para WhatsApp. Serve para o orientador chegar na reunião
+já tendo pensado — com 15 minutos, três perguntas é o que cabe, e as que ele puder responder
+por escrito antes liberam o tempo da sala para a Q1, que é a que precisa de conversa.
+
+O `*asterisco*` é negrito do WhatsApp; copie com eles.
+
+**Fica de fora de propósito:** o φ de 33° a 41° e o c de 6 a 53 kPa. Esses números saíram do
+agrupamento provisório da Q1 e nenhum script do repositório os reproduz — number que se manda
+por escrito é número que vai ser cobrado. Eles são para dizer na sala, de viva voz e com as
+ressalvas juntas. O ensaio travado (NT 608) e a mudança de escopo também ficam para a
+reunião: os dois precisam de tela para mostrar.
+
+```
+Professor, boa tarde! Antes da nossa reunião de quarta eu queria já deixar
+umas dúvidas aqui pro senhor ir pensando. São coisas que só quem conhece o
+laboratório sabe responder, e é o que está travando a próxima etapa do meu
+trabalho.
+
+Contexto rápido: peguei o acervo de cisalhamento direto do laboratório
+(1.043 arquivos desde 2023) e consegui fazer o programa ler todos
+automaticamente. Agora preciso agrupar os ensaios para montar as
+envoltórias, e é aí que eu empaquei.
+
+*1. Como eu sei quais ensaios formam uma série?*
+Cada arquivo é um corpo de prova com uma tensão normal só, e nada dentro do
+arquivo diz a quais outros ele pertence. Por enquanto estou agrupando por
+"mesma amostra + mesma condição + mesmo dia" — é esse o critério certo? E
+quando a série atravessa dois dias, como eu faço? Existe alguma planilha ou
+caderno de laboratório com esse registro?
+
+*2. As letras do ID (N, S, U, W, A)*
+São a condição do corpo de prova? O que cada uma quer dizer?
+
+*3. Os números D (D1, D7, D8, D9)*
+O que o D representa — profundidade de coleta? E por que não existe D2 a D6?
+
+*4. Onde eu leio o τ de pico na curva?*
+De cada ensaio eu preciso tirar um único valor de tensão cisalhante, que
+vira um ponto da envoltória. É o máximo da curva, ou o valor a um
+deslocamento limite? E quando a curva não tem pico claro, o que o senhor faz?
+
+*5. Posso usar esses ensaios?*
+Vi IDs de outras pessoas do grupo (Augusto, Gabriel, Paulo). Posso usar no
+PIBITI e no artigo, e como devo creditar? A campanha de 2026 que varia a
+velocidade de cisalhamento é pesquisa de alguém ainda em andamento?
+
+*6. Tem c e φ calculados à mão em algum lugar?*
+Para validar o sistema eu preciso comparar com o processamento manual. O
+senhor teria, de uns 3 ensaios, o c e o φ que saíram da planilha?
+
+*7. Um tipo de arquivo que eu não entendi*
+Achei 125 arquivos que só têm a etapa de adensamento, sem cisalhamento
+nenhum. Em 108 deles existe um outro arquivo, com o mesmo ID e a mesma data,
+que tem o cisalhamento. O que são esses arquivos?
+
+Se der para responder só a 1, a 4 e a 6 já me ajuda demais — são as três que
+travam o código. O resto a gente vê na quarta.
+
+Obrigado!
+```
+
+**Por que a 1, a 4 e a 6 no fim.** A Q1 define o agrupamento, a Q4 define como cada ensaio
+vira um ponto, e a Q6 é a única fonte de validação. Sem as três não há c, φ nem artigo — as
+outras quatro melhoram o relatório, mas não destravam código. Dar prioridade explícita
+aumenta a chance de voltar resposta: pergunta em bloco de sete costuma voltar vazia.
+
+**A Q7 está escrita para não induzir a resposta.** Ela pergunta *o que são* os arquivos, e
+não "vocês salvam o ensaio em duas partes, né?" — a segunda forma é quase impossível de
+responder com "não", e uma confirmação que você mesmo sugeriu não vale como confirmação.
+
+---
+
 # PARTE 1 · Para perguntar
 
 ## Abertura — mostre resultado antes de pedir ajuda
