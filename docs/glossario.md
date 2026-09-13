@@ -14,6 +14,40 @@ projeto onde ele apareceu — o exemplo concreto é o que faz o termo grudar.
 
 ---
 
+## Geotecnia e estatística
+
+### envoltória (de Mohr-Coulomb)
+A reta que separa, no gráfico σ × τ, os estados que o solo aguenta dos que o levam à
+ruptura. Equação: **τ = c + σ · tan φ**. Cada ensaio de cisalhamento direto fornece **um**
+ponto dessa reta; a envoltória exige 3 ou mais ensaios do mesmo solo sob tensões normais
+diferentes.
+**Aqui:** é o objetivo final do sistema. Um arquivo = um corpo de prova = um ponto, e nada
+no arquivo diz a quais outros ele pertence — é o bloqueio do `visao-geral.md` §3.
+
+### coesão (`c`)
+O intercepto da envoltória: a resistência que o solo tem mesmo sob tensão normal zero, por
+cimentação, sucção ou atração entre partículas. Unidade de tensão (Pa no código, kPa no
+relatório). Areia limpa tem c ≈ 0; solo-cimento tem centenas de kPa.
+
+### ângulo de atrito interno (`φ`)
+A inclinação da envoltória: quanta resistência a mais o solo ganha a cada acréscimo de
+tensão normal. É a parcela de atrito da resistência, contra a parcela de coesão. Radianos
+no código, graus no relatório (`CLAUDE.md`). Solo natural costuma ficar entre 30° e 40°.
+
+### τ de pico
+O valor único de tensão cisalhante que representa a resistência daquele corpo de prova, e
+que vira a coordenada vertical do ponto na envoltória. **Como lê-lo é uma decisão, não um
+dado:** máximo bruto da curva, máximo de curva suavizada, ou valor a um deslocamento
+fixado. Pergunta em aberto com o orientador (Q4).
+
+### `R²` (coeficiente de determinação)
+Mede o quanto a reta ajustada explica a dispersão dos pontos, de 0 a 1. R² = 1 é reta
+passando exatamente por todos os pontos. **Cuidado:** R² alto diz que os pontos estão
+alinhados, não que estão certos — um agrupamento errado pode dar R² excelente e c e φ sem
+significado físico.
+
+---
+
 ## Código e testes
 
 ### `parser`
@@ -59,6 +93,13 @@ nome do arquivo.
 ### `DataFrame`
 Tabela em memória da biblioteca pandas: colunas com nome, linhas numeradas, cada coluna com
 seu tipo. É o formato em que a série temporal do ensaio circula pelo sistema.
+
+### teste de caracterização
+Teste que trava o comportamento atual do sistema, em vez de verificar se ele está certo.
+Serve para que uma mudança futura não altere o resultado sem ninguém perceber.
+**Aqui:** travar os números da triagem do acervo (914 aproveitáveis, 108 com irmão, 17
+órfãos, 4 curtos). Se um limiar for ajustado e os 914 virarem 870, o teste falha e obriga a
+olhar quem foram os 44 que saíram — é a base do artigo mudando.
 
 ### falha silenciosa
 Defeito em que o código **não dá erro**, não avisa nada, e mesmo assim produz resultado
