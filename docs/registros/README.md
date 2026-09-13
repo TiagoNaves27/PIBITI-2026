@@ -21,6 +21,15 @@ Serve para três coisas, nesta ordem de importância:
   "Análise do acervo".
 - **Escrito para quem não estava lá** — inclusive para você mesmo daqui a seis meses. Sem
   "como vimos ontem", sem depender de conversa anterior.
+- **Separar o que o dado mostra do que é interpretação.** São dois parágrafos rotulados, não
+  um texto só. "125 arquivos não têm etapa de cisalhamento, e 108 deles têm um arquivo de
+  mesmo ID e mesma data que tem" é dado. "O laboratório salva o ensaio em duas partes" é
+  interpretação, e vai marcada como tal até alguém do laboratório confirmar.
+- **Nada de contexto inventado.** Não afirmar o que ninguém disse — como o acervo era usado
+  antes, o que o operador pensava, por que alguém fez o que fez. Se não veio de uma pessoa
+  ou de um arquivo, ou é dedução declarada, ou não entra. Um registro existe para ser
+  defendido na frente de um professor; uma frase plausível e sem fonte é o que derruba o
+  resto.
 - **Figura gerada por script**, nunca print de tela, guardada em `figuras/` e usando a
   paleta do `CLAUDE.md`.
 - **Registro não se corrige por cima.** Se o número mudar depois, o registro antigo fica

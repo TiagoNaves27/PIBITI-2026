@@ -81,6 +81,12 @@ Nunca commitar `.env`, dados brutos de ensaio ou PDFs de referência.
   de tela — não se regenera quando o dado muda e não tem resolução para projetor.
 - **Registro não se corrige por cima.** Número que mudar gera registro novo explicando a
   mudança; o antigo fica.
+- **Separar o que o dado mostra do que é interpretação**, em parágrafos rotulados. Dedução a
+  partir dos arquivos vai marcada como dedução, com o que falta para confirmá-la.
+- **Nunca inventar contexto.** Não afirmar o que ninguém disse — como o laboratório
+  trabalhava, o que o operador pretendia, por que um ensaio foi feito. Se não veio de uma
+  pessoa, de um arquivo, ou de dedução declarada como tal, não entra. Vale para todos os
+  documentos do projeto, não só para os registros.
 
 ## Explicar, não só entregar
 
