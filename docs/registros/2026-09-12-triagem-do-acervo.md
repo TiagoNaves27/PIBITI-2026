@@ -159,11 +159,12 @@ Faltam dois filtros: o descarte de ensaios que não romperam (`formato-bruto.md`
 critério 3) e o agrupamento em séries, que depende de uma resposta do orientador. O número de
 ensaios efetivamente usados será menor que 914.
 
-**Duas interpretações precisam ser confirmadas no laboratório**, e nenhuma delas está hoje
-na lista de perguntas ao orientador:
+**Duas interpretações precisam ser confirmadas no laboratório.** As duas estão na
+**Q7** de `docs/arquitetura/perguntas-orientador.md`, com a evidência e a forma de perguntar
+sem induzir a resposta:
 
 - [ ] os 108 arquivos "só de adensamento" com irmão são mesmo ensaios salvos em duas partes?
 - [ ] os arquivos com `ID do ensaio = MOVIMENTO` são teste de equipamento?
 
-Enquanto não forem confirmadas, as duas ficam no registro como dedução a partir dos dados —
-o que são.
+Enquanto não forem confirmadas, as duas ficam neste registro como dedução a partir dos dados
+— o que são. Quando forem respondidas, a resposta vira um registro novo; este aqui não muda.

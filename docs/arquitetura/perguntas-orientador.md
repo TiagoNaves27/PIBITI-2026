@@ -64,6 +64,17 @@ isso é informação sobre o agrupamento, não sobre o solo.
 > uns 3 desses ensaios, o **c e o φ calculados na planilha**, para eu comparar com o que o
 > meu código dá?"
 
+## Q7 · Dois tipos de arquivo que eu não sei ler
+
+> "Achei 125 arquivos que só têm a etapa de adensamento, sem cisalhamento nenhum. Em 108
+> deles existe um outro arquivo, com o mesmo ID e a mesma data, que tem o cisalhamento. O
+> que são esses arquivos?
+>
+> E os 17 que não têm esse par, o senhor sabe o que pode ter acontecido?
+>
+> Tem também uns arquivos de maio de 2023 com `ID MOVIMENTO`, que duram poucos segundos. São
+> teste de máquina da época da instalação?"
+
 ## Avisos a dar
 
 - **Mudança de escopo:** as máquinas já digitalizam os dados e estão em rede, então o
@@ -85,6 +96,7 @@ isso é informação sobre o agrupamento, não sobre o solo.
 - [ ] Pedir os resultados manuais de 3 ensaios (Q6)
 - [ ] Perguntar quem do grupo rodou a campanha D1/D7/D8/D9 — essa pessoa responde
       Q1, Q2 e Q3 mais rápido que o orientador
+- [ ] Mostrar um par de arquivos irmãos e perguntar o que são (Q7)
 - [ ] Anotar as respostas **literais**, não a sua interpretação delas
 
 ---
@@ -177,6 +189,29 @@ submissão do artigo. Além disso, quem rodou os ensaios é a melhor fonte para 
 O plano previa pedir 3 ensaios já processados manualmente. O acervo tem 51 envoltórias — o
 que **falta é o resultado manual** (c e φ calculados na planilha) de alguns deles, para
 comparar com a saída do sistema. Sem isso não há validação, e sem validação não há artigo.
+
+## Q7 · Os 108 irmãos e os `MOVIMENTO`
+
+**O que eu encontrei.** 125 dos 1.043 arquivos de cisalhamento direto não têm nenhuma
+leitura na etapa `Cisalhamento`. Cruzando `ID do ensaio` com a data, **108 têm um arquivo
+irmão** que tem a etapa; 17 não têm par nenhum. Separadamente, quatro arquivos têm de 1 a 4
+leituras de cisalhamento, duraram de 2 a 18 segundos e não passaram de 0,15 mm de
+deslocamento — dois deles de maio de 2023, com `ID MOVIMENTO`.
+
+**Por que importa.** Os 108 são 10% do acervo. Se forem mesmo um ensaio salvo em duas
+partes, o dado de adensamento deles é aproveitável e o sistema deveria juntar as duas
+metades. Se forem outra coisa, 108 arquivos estão classificados errado e o relatório vai
+contar uma história errada sobre o acervo.
+
+**Como perguntar sem induzir a resposta.** Não pergunte "vocês salvam em duas partes, né?" —
+é quase impossível responder "não" a isso. Abra os dois arquivos de um par concreto, mostre
+que um tem só adensamento e o outro tem o cisalhamento com o mesmo ID e a mesma data, e
+pergunte **o que são**. Resposta que você sugeriu não vale como confirmação.
+
+**Quem responde melhor:** quem opera a máquina, não o orientador.
+
+**Enquanto não houver resposta**, as duas leituras ficam marcadas como dedução no registro
+`docs/registros/2026-09-12-triagem-do-acervo.md`, não como fato.
 
 ---
 

@@ -86,6 +86,7 @@ Não dá erro na tela e não aparece no gráfico.
 | Q4 — como ler o τ de pico | a função que reduz cada ensaio a um ponto (σ, τ) |
 | Q2/Q3 — o que são N/S/U/W/A e D1/D7/D8/D9 | rótulo dos gráficos e a unidade de análise do relatório |
 | Q6 — c e φ calculados à mão | a validação do §8 — sem isso não há artigo |
+| Q7 — o que são os 108 arquivos com irmão | como o sistema trata 10% do acervo, e se o dado de adensamento deles é aproveitável |
 
 **O que não está travado, e deve ser escrito já:** o parser (§5) e a rotina de qualidade.
 Os dois trabalham em um arquivo por vez e não dependem de nenhuma dessas respostas.
