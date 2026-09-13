@@ -76,6 +76,16 @@ porque é básico para quem já programa.
   jargão de código (*parser*, *fixture*, *dataclass*, *lint*, *regex*, *BOM*, *LF/CRLF*),
   de Git (*commit*, *branch*, *remote*, *staged*) e de estatística (*R²*, *regressão*,
   *resíduo*). Uma frase basta — não vire aula, não interrompa o trabalho.
+- **Explicado uma vez, está explicado — não repetir.** Termo já explicado volta a ser usado
+  seco, como se ele sempre tivesse sabido. Nem versão resumida, nem lembrete entre
+  parênteses: repetir sugere que ele não entendeu da primeira vez, e é exatamente o tipo de
+  coisa que cansa. Ele pede de novo quando esquecer — e aí explicar direto, sem "como eu
+  disse antes".
+- **Na dúvida, não explique.** Entre uma sessão e outra não há registro do que já foi
+  explicado. Dois sinais resolvem quase sempre: se ele usou o termo espontaneamente, está
+  aprendido; se o termo aparece escrito em `docs/` ou num comentário do código do projeto,
+  já passou por ele. Errar para o lado de não explicar é melhor — explicação faltando ele
+  pede, explicação repetida ele engole calado.
 - **Todo comando vem com o que ele faz e como saber se deu certo.** Não `git add -A` solto,
   mas o que ele marca e o que a tela deve mostrar depois. Ele precisa distinguir sucesso de
   erro sozinho.
