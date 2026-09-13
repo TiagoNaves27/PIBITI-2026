@@ -23,7 +23,7 @@ chaves de cabeçalho, mesmas 17 colunas. Nenhuma exceção encontrada.
 
 | Propriedade | Valor |
 | --- | --- |
-| Codificação | UTF-8 |
+| Codificação | UTF-8 **com BOM** — nos 1.043 arquivos, sem exceção |
 | Separador de campo | `;` |
 | Separador decimal | `,` (vírgula) |
 | Linhas de metadados | 7 |
@@ -32,7 +32,7 @@ chaves de cabeçalho, mesmas 17 colunas. Nenhuma exceção encontrada.
 
 ```python
 import pandas as pd
-df = pd.read_csv(caminho, sep=";", skiprows=7, decimal=",")
+df = pd.read_csv(caminho, sep=";", skiprows=7, decimal=",", encoding="utf-8-sig")
 ```
 
 ### 2.1 Cabeçalho (linhas 1-7, formato `chave;valor`)

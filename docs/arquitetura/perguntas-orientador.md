@@ -13,9 +13,17 @@ repreguntar. Leia a Parte 2 antes de entrar; use só a Parte 1 lá dentro.
 ## Abertura — mostre resultado antes de pedir ajuda
 
 > "Peguei o acervo de ensaios do laboratório, 1.043 de cisalhamento direto desde 2023.
-> Consegui ler todos automaticamente e rodei a envoltória de Mohr-Coulomb em cima deles.
-> Deu **φ entre 33° e 41°** e **c entre 6 e 53 kPa**, com **R² acima de 0,95** na maioria
-> dos grupos. Bate com o que o senhor espera desses solos?"
+> Consegui ler todos automaticamente e rodei a envoltória de Mohr-Coulomb em cima deles,
+> agrupando por um critério provisório que eu mesmo inventei — é justamente sobre ele que
+> eu preciso perguntar. Deu **φ entre 33° e 41°** e **c entre 6 e 53 kPa**, com **R² acima
+> de 0,95** na maioria dos grupos. Bate com o que o senhor espera desses solos?"
+
+**Não apresente esses números como resultado.** Eles saíram do agrupamento provisório da Q1,
+antes do critério de descarte do `formato-bruto.md` §5.4 e sem separar a campanha de material
+cimentado da de solo natural — as mesmas ressalvas que fazem das "51 envoltórias" uma
+estimativa superior. Servem para mostrar que a leitura automática funciona de ponta a ponta,
+e para dar ao orientador um número concreto em que reagir. Se ele disser "esse c está alto",
+isso é informação sobre o agrupamento, não sobre o solo.
 
 ## Q1 · Agrupamento — a mais importante
 
@@ -61,9 +69,15 @@ repreguntar. Leia a Parte 2 antes de entrar; use só a Parte 1 lá dentro.
 - **Mudança de escopo:** as máquinas já digitalizam os dados e estão em rede, então o
   Raspberry Pi saiu do plano. O sistema continua automatizando a aquisição, mas a partir
   dos arquivos que as máquinas já produzem.
-- **Achei um erro no acervo:** na série D1N de 30/09/2024 tem um τ de 1.755 kPa, que é
-  fisicamente impossível. O sistema automatizado detecta isso; o processamento manual
-  provavelmente não pegaria.
+- **Achei um ensaio travado no acervo:** o NT 608 (`D1N16`, 30/09/2024, σ = 160 kPa) marca
+  τ = 1.755 kPa. A leitura é real — o que não é resistência do solo. O ensaio parou em
+  3,7 mm com a curva ainda acelerando, sem nenhum pico, e com carga horizontal de 486 kg
+  contra 35 a 50 kg nos ensaios vizinhos da mesma série. É o que se espera quando a caixa
+  bipartida não está livre; a máquina mediu a reação do equipamento.
+  Dizer assim, e não "valor impossível": o acervo tem ensaios legítimos com τ ainda mais
+  alto em relação a σ (solo-cimento chega a 1.182 kPa sob 50 kPa). **O que separa um do
+  outro é a forma da curva, não a magnitude** — e é isso que o sistema automatizado compara
+  e o processamento manual, que lê o máximo da coluna, não tem como perceber.
 
 ## Antes de sair da sala
 
@@ -116,9 +130,11 @@ misturar condições diferentes numa mesma envoltória, o c e o φ perdem signif
 ## Q3 · Os números D
 
 **O que eu encontrei.** Só existem D1, D7, D8 e D9 — o salto de D2 a D6 provavelmente
-significa alguma coisa. Confirmei que **não é geometria**: o diâmetro é 60 mm em todos os
-1.043, e a altura varia de 20 a 25 mm de corpo de prova para corpo de prova, inclusive
-dentro do mesmo D.
+significa alguma coisa. Confirmei que **não é geometria**: em toda a campanha D o diâmetro é
+60 mm, e a altura varia de 20 a 25 mm de corpo de prova para corpo de prova, inclusive
+dentro do mesmo D. (No acervo inteiro há 15 arquivos fora dos 60 mm — molde de ~42 mm na
+campanha cimentada `B2-30D-*` e a medida real do corpo de prova na campanha `CAT`, 59,89 e
+60,10 — mas nenhum deles é da campanha D.)
 
 **Meus palpites, em ordem:** profundidade de coleta em metros · densidade · dias de cura.
 
@@ -135,7 +151,7 @@ o φ diretamente.
 
 | Critério | Vantagem | Risco |
 | --- | --- | --- |
-| Máximo bruto da curva | simples | um pico espúrio destrói o resultado (achei um de 1.755 kPa) |
+| Máximo bruto da curva | simples | um ensaio que travou entra como se fosse resistência (o NT 608, de 1.755 kPa) |
 | Máximo de curva suavizada | robusto a ruído | suavizar é escolha que precisa ser justificada no artigo |
 | Valor a um deslocamento fixado | é o que a norma prescreve | precisa saber qual deslocamento |
 
