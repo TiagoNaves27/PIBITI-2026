@@ -13,9 +13,15 @@ Quem mantém: você. Artefato novo entra aqui com o link e uma linha do que ele 
 ## Em uso
 
 - <https://claude.ai/code/artifact/46ec1a79-dc82-4ada-8fce-fa185a9cf4a3>
-  **Bancada PIBITI** — o painel das 48 semanas do projeto, da Fase 0 à Fase 6. Marca tarefa
-  por tarefa, guarda o que você marcou, tem campo de anotação por semana e um botão que copia
-  um resumo do progresso para mandar ao orientador. Traz também a ordem de corte, se atrasar.
+  **Bancada PIBITI** — o painel das 48 semanas e o **registro de progresso do projeto**.
+  Marca tarefa por tarefa, guarda o que você marcou, tem campo de anotação por semana e um
+  botão que copia um resumo para mandar ao orientador. Traz também a ordem de corte, se
+  atrasar, e cinco barras de progresso por tipo de trabalho — laboratório, estudo,
+  programação, análise e escrita — para separar o que está andando do que está parado.
+
+  **Ele é atualizado sempre que alguma coisa fica pronta**, na mesma sessão em que ficar.
+  Só se marca o que o repositório prova: código, teste, documento ou commit. Estudo e
+  conversa com o laboratório não deixam rastro aqui, então essas você marca.
 
 - <https://claude.ai/code/artifact/364f48f1-a2db-4fa3-b50c-f38fb7e9302a>
   **Próximas quatro semanas** — o plano de 14/09 a 11/10 em detalhe: o que fazer em cada
