@@ -174,3 +174,15 @@ o que já está marcado.
 Arquivo que dá instruções ao Git sobre como tratar certos arquivos.
 **Aqui:** `*.csv -text` manda o Git não mexer nas quebras de linha dos CSV, para que os
 dados brutos cheguem a qualquer computador exatamente como a máquina os gravou.
+
+---
+
+## Ferramentas
+
+### Artifact
+Página HTML que o assistente publica e que fica hospedada no claude.ai, com link próprio.
+Não é arquivo do repositório: não aparece no `git status`, não está em pasta nenhuma do
+computador e procurar por ela no Desktop não acha. Listar todas: `/artifacts` no terminal,
+ou <https://claude.ai/code/artifacts> no navegador.
+**Aqui:** a *Bancada PIBITI* e o plano das *Próximas quatro semanas* são Artifacts. Os links
+estão em `docs/mapa-do-repositorio.md`.
