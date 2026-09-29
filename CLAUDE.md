@@ -29,25 +29,45 @@ divergir do plano.
 
 ## Paleta
 
-Tons terrosos, definidos pelo aluno. Vale para páginas, gráficos e figuras do relatório.
+**Swiss Modern** — preto, branco e um único acento vermelho. Definida pelo aluno em
+29/09/2026, substituindo a paleta de tons terrosos. Vale para páginas, apresentações, gráficos e
+figuras do relatório. Tipografia: **Archivo** (títulos, números, rótulos) + **Nunito** (texto).
+Guia completo, com componentes: `docs/apresentacoes/ESTILO.md`.
 
-| Token | Claro | Escuro | Uso |
+| Token | Claro | Invertido | Uso |
 | --- | --- | --- | --- |
-| `ink` | `#402905` | `#ead0a8` | texto principal; preenchimento de destaque máximo |
-| `ink-soft` | `#6b5428` | `#cbb68c` | texto secundário |
-| `muted` | `#7d6840` | `#9b8555` | rótulos, legendas |
-| `terra` | `#76552b` | `#d4b06f` | acento: ênfase, foco, bordas de destaque |
-| `ocre` | `#b69f66` | `#b69f66` | preenchimentos e barras — **nunca texto** (contraste 2,7:1) |
-| `ocre-soft` | `#ead0a8` | `#3d2f14` | fundos suaves, chips |
-| `ground` / `surface` | `#e9dcc0` / `#fbf5ea` | `#1a1207` / `#281d0d` | fundo da página / cartões |
-| `done` | `#5f7040` | `#8fa86a` | **semântico** (concluído), fora da identidade |
+| `ink` | `#000000` | `#ffffff` | texto principal; filetes grossos; painéis e blocos de destaque |
+| `ink-soft` | `#333333` | `#d0d0d0` | texto secundário |
+| `muted` | `#5a5a5a` | `#a8a8a8` | rótulos, legendas, fontes |
+| `red` | `#ff3300` | `#ff3300` | acento único: número principal, rótulos, série em destaque |
+| `red-deep` | `#dd2c00` | — | só fundo chapado (divisores de seção), sempre com texto branco |
+| `gray` | `#cfcfcf` | `#444444` | preenchimentos e barras secundárias — **nunca texto** |
+| `rule` / `soft` | `#d6d6d6` / `#f2f2f2` | `#333333` / `#1a1a1a` | filetes finos / fundos suaves, `code` |
+| `ground` | `#ffffff` | `#000000` | fundo da página |
+| `done` | `#2f7a3b` | `#5fb56c` | **semântico** (concluído), fora da identidade |
 
-A paleta é monocromática, então **hierarquia se faz por valor e preenchimento**, não por
-matiz: chip sólido escuro > chip sólido `terra` > chip contornado. Não invente uma segunda
-cor de acento para diferenciar dois elementos lado a lado.
+**Vermelho em texto só em tamanho grande ou negrito ≥ 18 px** (contraste 3,7:1 sobre branco).
+Texto corrido é sempre `ink` ou `muted`. Hierarquia se faz por **peso, tamanho e preenchimento
+preto**; o vermelho marca **uma** coisa por vez — não invente uma segunda cor de acento para
+diferenciar dois elementos lado a lado.
 
-Em gráficos com várias séries, varie **valor e traço** (contínuo / tracejado / marcador)
-antes de sair da paleta — série de ensaio não deve depender só de cor para ser distinguida.
+Em gráficos com várias séries: série principal preta e contínua, série em destaque vermelha,
+tracejada e com marcador, demais em `gray`. Varie **traço e marcador** antes de acrescentar cor —
+série de ensaio não deve depender só de cor para ser distinguida.
+
+As figuras antigas de `docs/registros/figuras/` (até 16/09/2026) foram geradas na paleta
+terrosa e ficam como estão — registro não se corrige por cima. Figuras novas usam esta paleta.
+
+## Apresentações
+
+Ficam em `docs/apresentacoes/`, com as regras do `README.md` de lá (nome `AAAA-MM-DD-assunto.html`,
+tabela de referências slide a slide, todo número rastreável até um registro). Estilo fixo:
+**Swiss Modern**, descrito em `docs/apresentacoes/ESTILO.md`. Para começar uma nova, copiar
+`docs/apresentacoes/MODELO.html`.
+
+A skill `frontend-slides` está instalada em `.claude/skills/`. Ao usá-la aqui, o estilo já está
+escolhido: pular a descoberta de estilo (prévias) e gerar direto no Swiss Modern do `ESTILO.md`,
+salvando em `docs/apresentacoes/` — a menos que o aluno peça para explorar outro estilo.
 
 ## Ambiente
 

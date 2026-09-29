@@ -11,6 +11,9 @@ orientador e outras apresentações.
   por caminho relativo, então precisam do repositório ao lado — não funcionam se o `.html`
   for movido ou aberto isolado.
 - **Navegação:** seta `←`/`→`, espaço, `Home`/`End`, ou clique nas bordas laterais da tela.
+  Nas apresentações a partir de 29/09/2026, também rolagem do mouse e deslizar o dedo.
+- **Estilo:** Swiss Modern, desde 29/09/2026 — regras em [`ESTILO.md`](ESTILO.md). Para uma
+  apresentação nova, copiar [`MODELO.html`](MODELO.html), que tem um exemplo de cada componente.
 - **Cada apresentação abaixo tem sua tabela de referências**, slide a slide: de qual registro
   ou documento cada slide tirou frase, número ou figura. Servem para uma coisa só — quando um
   registro for corrigido (o `2026-09-12-triagem-do-acervo.md` já avisa que os 914 podem
@@ -29,6 +32,81 @@ orientador e outras apresentações.
 | Data | Apresentação |
 | --- | --- |
 | 16/09/2026 | [Reunião de alinhamento](2026-09-16-reuniao-alinhamento.html) |
+| 29/09/2026 | [Teste de design — Terra oficial](2026-09-29-teste-design-terra.html) e [Teste de design — GeoFluxo real](2026-09-29-teste-design-geofluxo.html) |
+| 29/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-29-reuniao-alinhamento.html) (versão a apresentar) |
+
+---
+
+## Reunião de alinhamento — 29/09/2026 (Swiss Modern)
+
+A versão a apresentar. Junta o conteúdo da reestruturação de 29/09 (abaixo) com slides novos
+tirados direto dos registros — dois layouts, critério de não-ruptura, tabela dos seis
+identificadores, maiores razões τ/σ — no estilo definido em `ESTILO.md`. O NT 608 continua fora.
+Os gráficos são desenhados no próprio slide, a partir dos mesmos dados de
+`scripts/apoio_apresentacao.py`; não usam os PNGs.
+
+| # | Slide | Referência |
+| --- | --- | --- |
+| 1 | Abertura | — (título; o 914 do bloco vem de `2026-09-12-triagem-do-acervo.md`) |
+| 2 | Resultado primeiro | `docs/arquitetura/perguntas-orientador.md` §Abertura e §Q1; `formato-bruto.md` §6 (51 é estimativa superior) |
+| 3 | Agenda | — (estrutural) |
+| 4 | Mudança de escopo | `docs/registros/2026-09-12-mudanca-de-escopo.md` |
+| 5 | O acervo, em números | `2026-09-12-mudanca-de-escopo.md`; `2026-09-12-triagem-do-acervo.md` |
+| 6 | Divisor: o que o acervo escondia | resume os slides 7 a 13 |
+| 7 | Triagem do acervo | `2026-09-12-triagem-do-acervo.md` |
+| 8 | Ensaios que nunca rompem (NT 268 × NT 296) | `2026-09-12-ensaios-travados.md` (NT 268: 794 kPa, 3,3 mm, 41×); curvas de `scripts/apoio_apresentacao.py` sobre os `.csv` brutos |
+| 9 | O filtro em ação | `2026-09-12-ensaios-travados.md` (funil 914 → 3; NT 268 e NT 625) |
+| 10 | Forma, não magnitude | `2026-09-12-forma-da-curva.md`; razão 2× do NT 268 calculada de `2026-09-12-ensaios-travados.md` (794 / 399) |
+| 11 | A envoltória que sobra | `scripts/apoio_apresentacao.py envoltoria` — **ainda sem registro próprio**; NT 614 de `2026-09-12-id-nao-e-dado.md` |
+| 12 | O formato do ID | `2026-09-12-id-nao-e-dado.md`; plano de padronizar o ID vem da apresentação de 16/09 |
+| 13 | Dois layouts | `2026-09-13-dois-layouts.md` |
+| 14 | Citação | `2026-09-13-dois-layouts.md` §O que ficou em aberto |
+| 15 | Síntese | os registros dos slides 7 a 13 |
+| 16 | Repositório no GitHub | captura de tela `figuras/repositorio-github.png` |
+| 17 | Em aberto | `perguntas-orientador.md` (Q1, Q7); `2026-09-12-forma-da-curva.md` (NT 923); `2026-09-12-mudanca-de-escopo.md` (triaxial) |
+| 18 | Obrigado | — (fechamento) |
+
+**Pendência de rastreabilidade.** O slide 11 cita φ = 32,6°, c = 24,0 kPa e R² = 0,987, que
+vêm de um script de apoio e não de um registro — a regra acima pede registro. Antes de
+apresentar para além do orientador, vale escrever o registro da envoltória da série D1N.
+
+---
+
+## Testes de design — 29/09/2026
+
+Duas variantes do mesmo conteúdo (a reunião de alinhamento, reestruturada — ver abaixo),
+para comparar direção visual antes de fechar uma única versão:
+
+- **`2026-09-29-teste-design-terra.html`** — a paleta oficial do `CLAUDE.md`, aplicada de
+  verdade (o deck de 16/09 usava um acento teal que não está na tabela oficial). Hierarquia
+  só por valor/preenchimento, sem segunda cor: o antigo vermelho de "alerta" virou
+  preenchimento sólido `ink`, seguindo a regra "chip sólido escuro > chip sólido terra >
+  chip contornado" do `CLAUDE.md`.
+- **`2026-09-29-teste-design-geofluxo.html`** — inspirado no CSS real de `geofluxo.com`
+  (inspecionado via `curl`, não visualmente — sem extensão do Chrome conectada nesta sessão):
+  fundo slate, acento teal (`#0d9488`/`#14b8a6`), Rajdhani nos títulos + Open Sans no corpo.
+  Diverge da identidade terrosa do projeto — é um teste, não uma proposta de mudar o
+  `CLAUDE.md`.
+
+**Mudanças de conteúdo, válidas nas duas variantes:**
+
+- **O NT 608 saiu inteiro.** O slide "Ensaios travados" (só sobre ele) foi removido. Os
+  slides "O filtro e os três casos" e "Forma da curva vs. magnitude" foram reescritos e
+  fundidos em dois slides que usam o **NT 268** como exemplo (razão τ/σ de só 2× — reforça
+  o argumento "forma da curva, não magnitude", sem a magnitude dramática do NT 608).
+- **Slide novo: "A envoltória que sobra".** Mostra que os 7 ensaios da série D1N
+  (30/09/2024) que passam no filtro de forma da curva já fecham uma envoltória de
+  Mohr-Coulomb sozinhos (φ = 32,6°, c = 24,0 kPa, R² = 0,987) — o gráfico que faltava para
+  o resultado citado no slide 2.
+- **Figuras novas**, geradas por `scripts/apoio_apresentacao.py` (script avulso de apoio à
+  apresentação, não faz parte de `src/geotec/`; lê os `.csv` brutos direto porque o parser
+  de produção ainda não existe):
+  - `docs/registros/figuras/forma-da-curva-268.png` — NT 296 (rompe) vs. NT 268 (travado).
+  - `docs/registros/figuras/envoltoria-d1n.png` — envoltória dos 7 ensaios da série D1N.
+
+**Decidido em 29/09/2026:** nenhuma das duas linhas — o estilo final é o **Swiss Modern**
+(`ESTILO.md`), aplicado na apresentação de 29/09 acima. Os dois testes e a apresentação de
+16/09 ficam como registro histórico, sem alteração.
 
 ---
 
