@@ -684,10 +684,10 @@ figcaption { margin-top: 10px; }
             <div><p class="stat-v">24,0 kPa</p><p class="stat-l">c, coesão</p></div>
             <div><p class="stat-v">0,987</p><p class="stat-l">R²</p></div>
           </div>
-          <p class="nota">O ponto a 22 kPa é o NT 614: o ID dizia 160 kPa. Com o <span class="sym">σ</span> do nome, ele puxaria a reta para baixo — ver slide 12.</p>
+          <p class="nota">O ponto a 22 kPa é o NT 614: o ID dizia 160 kPa. Com o <span class="sym">σ</span> do nome, a coesão sairia negativa (−0,9 kPa) — ver slide 12. Sem o filtro de ruptura, o ensaio travado da série entraria e o R² cairia para 0,001.</p>
         </div>
       </div>
-      <p class="fonte reveal">Pontos e regressão: <code>uv run python scripts/apoio_apresentacao.py envoltoria</code> · ainda sem registro próprio</p>
+      <p class="fonte reveal">docs/registros/2026-09-29-envoltoria-d1n.md · conferir: <code>uv run python scripts/apoio_apresentacao.py variantes</code></p>
       <footer class="rodape"><span>Reunião de alinhamento · PIBITI 2026 · GeoFluxo — UnB</span><span class="pg">11 / 18</span></footer>
       <nav class="marco" aria-label="Seções"><i class=""><b>01</b> Escopo</i><i class="on"><b>02</b> O que o acervo escondia</i><i class=""><b>03</b> O que mudou no sistema</i><i class=""><b>04</b> Onde está guardado</i><i class=""><b>05</b> Em aberto</i></nav>
     </section>
@@ -835,7 +835,7 @@ class InlineEditor {
   constructor(stage) {
     this.stage = stage;
     this.isActive = false;
-    this.key = 'frontend-slides:' + location.pathname + ':20260929203426';
+    this.key = 'frontend-slides:' + location.pathname + ':20260929204627';
     this.editables = 'h1, h2, h3, p, li, td, th, blockquote, figcaption, .lab, .num';
     try { const saved = localStorage.getItem(this.key); if (saved) this.stage.innerHTML = saved; } catch (e) {}
     let t; this.stage.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => this.save(), 400); });

@@ -8,6 +8,7 @@ existe em src/geotec/parsers/).
 Uso:
     uv run python scripts/apoio_apresentacao.py forma-da-curva
     uv run python scripts/apoio_apresentacao.py envoltoria
+    uv run python scripts/apoio_apresentacao.py variantes
 """
 
 from __future__ import annotations
@@ -101,8 +102,13 @@ def figura_forma_da_curva() -> None:
 
 
 SERIE_D1N = [606, 607, 609, 610, 611, 613, 614]  # 30/09/2024, os 7 que romperam
-# NT 612 (mesmo ID D1N2 do NT 613, 6 min antes) fica de fora: sem etapa de
-# cisalhamento no arquivo -- provavelmente reiniciado pelo operador.
+# Dos 9 arquivos D1N de 30/09/2024 ficam de fora:
+# - NT 612: sem etapa de cisalhamento; o NT 613 (mesmo ID D1N2, 6 min depois)
+#   tem -- um dos 108 "so adensamento, com irmao" da triagem;
+# - NT 608: nao rompeu (pico no ultimo ponto, 3,69 mm) -- registro 2026-09-12.
+TRAVADO_D1N = 608
+# 01/10/2024, romperam; so entram se a serie puder atravessar dias (Q1)
+D1N16_DIA_SEGUINTE = [616, 618]
 
 
 def ponto_envoltoria(nt: int) -> tuple[float, float]:
@@ -152,9 +158,49 @@ def figura_envoltoria() -> None:
     destino = DESTINO / "envoltoria-d1n.png"
     fig.savefig(destino, dpi=200, facecolor=SURFACE)
     print(f"c = {c:.2f} kPa, phi = {phi:.2f} graus, R2 = {r2:.4f}")
-    for nt, (s, t) in zip(SERIE_D1N, pontos):
+    for nt, (s, t) in zip(SERIE_D1N, pontos, strict=True):
         print(f"  NT {nt}: sigma={s:.1f} kPa, tau={t:.1f} kPa")
     print(f"salvo em {destino}")
+
+
+def ajustar(pontos: list[tuple[float, float]]) -> tuple[float, float, float]:
+    """Regressao linear tau = c + sigma * tan(phi) sobre pontos (sigma, tau) em kPa.
+
+    Devolve (c em kPa, phi em graus, R2).
+    """
+    reg = stats.linregress([p[0] for p in pontos], [p[1] for p in pontos])
+    return float(reg.intercept), float(np.degrees(np.arctan(reg.slope))), float(reg.rvalue**2)
+
+
+def variantes_envoltoria() -> None:
+    """Quanto a envoltoria D1N muda conforme o que entra nela. Tensoes em kPa.
+
+    - correta: os 7 que romperam, sigma medido pela maquina;
+    - sem filtro de ruptura: + NT 608 com o maximo de tau, como uma planilha faria;
+    - sigma lido do ID: NT 614 com os 160 kPa que o ID D1N16 sugere, em vez de 22,2;
+    - serie de dois dias: + NT 616 e NT 618 (01/10/2024), se a Q1 permitir.
+    """
+    base = {nt: ponto_envoltoria(nt) for nt in SERIE_D1N}
+
+    sem_filtro = list(base.values()) + [ponto_envoltoria(TRAVADO_D1N)]
+    sigma_do_id = [((160.0, t) if nt == 614 else (s, t)) for nt, (s, t) in base.items()]
+    dois_dias = list(base.values()) + [ponto_envoltoria(nt) for nt in D1N16_DIA_SEGUINTE]
+
+    variantes = [
+        ("correta (7 ensaios que romperam)", list(base.values())),
+        ("sem filtro de ruptura (+ NT 608)", sem_filtro),
+        ("sigma do NT 614 lido do ID (160)", sigma_do_id),
+        ("serie de dois dias (+ NT 616, 618)", dois_dias),
+    ]
+    print(f"{'variante':38s} {'pontos':>6s} {'c [kPa]':>9s} {'phi [graus]':>12s} {'R2':>8s}")
+    for nome, pontos in variantes:
+        c, phi, r2 = ajustar(pontos)
+        print(f"{nome:38s} {len(pontos):6d} {c:9.1f} {phi:12.1f} {r2:8.4f}")
+    t608 = ponto_envoltoria(TRAVADO_D1N)
+    print(f"\nNT 608: sigma={t608[0]:.1f} kPa, tau max={t608[1]:.1f} kPa (nao rompeu)")
+    for nt in D1N16_DIA_SEGUINTE:
+        s, t = ponto_envoltoria(nt)
+        print(f"NT {nt}: sigma={s:.1f} kPa, tau={t:.1f} kPa (01/10/2024)")
 
 
 if __name__ == "__main__":
@@ -163,3 +209,5 @@ if __name__ == "__main__":
         figura_forma_da_curva()
     if alvo in ("envoltoria", "all"):
         figura_envoltoria()
+    if alvo in ("variantes", "all"):
+        variantes_envoltoria()

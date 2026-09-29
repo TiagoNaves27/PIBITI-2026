@@ -57,7 +57,7 @@ Os gráficos são desenhados no próprio slide, a partir dos mesmos dados de
 | 8 | Ensaios que nunca rompem (NT 268 × NT 296) | `2026-09-12-ensaios-travados.md` (NT 268: 794 kPa, 3,3 mm, 41×); curvas de `scripts/apoio_apresentacao.py` sobre os `.csv` brutos |
 | 9 | O filtro em ação | `2026-09-12-ensaios-travados.md` (funil 914 → 3; NT 268 e NT 625) |
 | 10 | Forma, não magnitude | `2026-09-12-forma-da-curva.md`; razão 2× do NT 268 calculada de `2026-09-12-ensaios-travados.md` (794 / 399) |
-| 11 | A envoltória que sobra | `scripts/apoio_apresentacao.py envoltoria` — **ainda sem registro próprio**; NT 614 de `2026-09-12-id-nao-e-dado.md` |
+| 11 | A envoltória que sobra | `docs/registros/2026-09-29-envoltoria-d1n.md` (c, φ, R² e as variantes); NT 614 de `2026-09-12-id-nao-e-dado.md` |
 | 12 | O formato do ID | `2026-09-12-id-nao-e-dado.md`; plano de padronizar o ID vem da apresentação de 16/09 |
 | 13 | Dois layouts | `2026-09-13-dois-layouts.md` |
 | 14 | Citação | `2026-09-13-dois-layouts.md` §O que ficou em aberto |
@@ -66,9 +66,10 @@ Os gráficos são desenhados no próprio slide, a partir dos mesmos dados de
 | 17 | Em aberto | `perguntas-orientador.md` (Q1, Q7); `2026-09-12-forma-da-curva.md` (NT 923); `2026-09-12-mudanca-de-escopo.md` (triaxial) |
 | 18 | Obrigado | — (fechamento) |
 
-**Pendência de rastreabilidade.** O slide 11 cita φ = 32,6°, c = 24,0 kPa e R² = 0,987, que
-vêm de um script de apoio e não de um registro — a regra acima pede registro. Antes de
-apresentar para além do orientador, vale escrever o registro da envoltória da série D1N.
+**Rastreabilidade do slide 11.** φ = 32,6°, c = 24,0 kPa e R² = 0,987 tinham vindo só do
+script de apoio; desde 29/09 têm registro próprio,
+[`2026-09-29-envoltoria-d1n.md`](../registros/2026-09-29-envoltoria-d1n.md), que também mede
+quanto a envoltória muda sem o filtro de ruptura e com o σ lido do ID.
 
 ---
 
