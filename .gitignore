@@ -27,7 +27,9 @@ referencias/pdfs/*
 !referencias/pdfs/.gitkeep
 
 # Saidas geradas
-figuras/
+# So a pasta figuras/ da raiz. As de docs/registros/ e docs/apresentacoes/ sao
+# versionadas: os registros e os slides apontam para elas.
+/figuras/
 *.pdf.bak
 
 # Sistema operacional
