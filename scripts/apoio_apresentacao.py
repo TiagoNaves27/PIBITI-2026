@@ -64,14 +64,15 @@ def figura_forma_da_curva() -> None:
     ax.plot(
         nt296["Deslocamento Cisalhante [mm]"],
         nt296["Tensao Cisalhante [kPa]"],
-        color=TERRA,
+        color=INK,
         linewidth=2.2,
         label="NT 296 (σ = 50 kPa) — rompe",
     )
+    # serie em destaque (o ensaio travado): acento, tracejada e com marcador
     ax.plot(
         nt268["Deslocamento Cisalhante [mm]"],
         nt268["Tensao Cisalhante [kPa]"],
-        color=INK,
+        color=TERRA,
         linewidth=2.2,
         linestyle="--",
         marker="o",
