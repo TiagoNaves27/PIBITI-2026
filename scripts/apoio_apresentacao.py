@@ -9,6 +9,14 @@ Uso:
     uv run python scripts/apoio_apresentacao.py forma-da-curva
     uv run python scripts/apoio_apresentacao.py envoltoria
     uv run python scripts/apoio_apresentacao.py variantes
+    uv run python scripts/apoio_apresentacao.py curvas-d1n
+    uv run python scripts/apoio_apresentacao.py variantes-maximo
+    uv run python scripts/apoio_apresentacao.py acervo-10mm
+
+Desde 29/09/2026 o tau de cada ensaio e lido a 10 mm de deslocamento, o
+criterio do laboratorio (registro 2026-09-29-ruptura-a-10mm.md). Os
+subcomandos terminados em "-maximo" refazem as contas com o maximo da
+curva, o criterio usado ate entao (registro 2026-09-29-envoltoria-d1n.md).
 """
 
 from __future__ import annotations
@@ -111,16 +119,42 @@ TRAVADO_D1N = 608
 D1N16_DIA_SEGUINTE = [616, 618]
 
 
-def ponto_envoltoria(nt: int) -> tuple[float, float]:
+DESLOCAMENTO_RUPTURA = 10.0  # mm -- criterio do laboratorio (registro 2026-09-29-ruptura-a-10mm)
+
+
+def tau_no_deslocamento(df: pd.DataFrame, deslocamento: float) -> float:
+    """Tau em kPa no deslocamento cisalhante dado (mm), interpolado entre leituras.
+
+    Devolve NaN se o ensaio parou antes desse deslocamento.
+    """
+    d = df["Deslocamento Cisalhante [mm]"].to_numpy()
+    t = df["Tensao Cisalhante [kPa]"].to_numpy()
+    if d.max() < deslocamento:
+        return float("nan")
+    if np.any(np.diff(d) < 0):
+        raise ValueError("deslocamento cisalhante nao e crescente")
+    return float(np.interp(deslocamento, d, t))
+
+
+def ponto_envoltoria(nt: int, criterio: str = "10mm") -> tuple[float, float]:
+    """Par (sigma, tau) em kPa de um ensaio.
+
+    sigma: mediana da tensao normal na etapa de cisalhamento.
+    tau: a 10 mm de deslocamento ("10mm", criterio do laboratorio) ou o
+    maximo da curva ("maximo", criterio usado ate 29/09/2026).
+    """
     df = etapa_cisalhamento(achar(nt))
     sigma = float(df["Tensao Normal [kPa]"].median())
-    tau = float(df["Tensao Cisalhante [kPa]"].max())
+    if criterio == "maximo":
+        tau = float(df["Tensao Cisalhante [kPa]"].max())
+    else:
+        tau = tau_no_deslocamento(df, DESLOCAMENTO_RUPTURA)
     return sigma, tau
 
 
-def figura_envoltoria() -> None:
+def figura_envoltoria(criterio: str = "10mm") -> None:
     """Envoltoria de Mohr-Coulomb da serie D1N, 30/09/2024 (7 ensaios que romperam)."""
-    pontos = [ponto_envoltoria(nt) for nt in SERIE_D1N]
+    pontos = [ponto_envoltoria(nt, criterio) for nt in SERIE_D1N]
     sigmas = np.array([p[0] for p in pontos])
     taus = np.array([p[1] for p in pontos])
 
@@ -155,7 +189,9 @@ def figura_envoltoria() -> None:
     )
 
     fig.tight_layout()
-    destino = DESTINO / "envoltoria-d1n.png"
+    # a figura do maximo e a do registro de 29/09 e nao e sobrescrita
+    nome = "envoltoria-d1n.png" if criterio == "maximo" else "envoltoria-d1n-10mm.png"
+    destino = DESTINO / nome
     fig.savefig(destino, dpi=200, facecolor=SURFACE)
     print(f"c = {c:.2f} kPa, phi = {phi:.2f} graus, R2 = {r2:.4f}")
     for nt, (s, t) in zip(SERIE_D1N, pontos, strict=True):
@@ -172,19 +208,23 @@ def ajustar(pontos: list[tuple[float, float]]) -> tuple[float, float, float]:
     return float(reg.intercept), float(np.degrees(np.arctan(reg.slope))), float(reg.rvalue**2)
 
 
-def variantes_envoltoria() -> None:
+def variantes_envoltoria(criterio: str = "10mm") -> None:
     """Quanto a envoltoria D1N muda conforme o que entra nela. Tensoes em kPa.
 
     - correta: os 7 que romperam, sigma medido pela maquina;
-    - sem filtro de ruptura: + NT 608 com o maximo de tau, como uma planilha faria;
+    - sem filtro de ruptura: + NT 608 com o maximo de tau. O NT 608 parou aos
+      3,69 mm e nao tem valor a 10 mm; entrar com ele e usar o unico numero
+      que o arquivo oferece, o maximo;
     - sigma lido do ID: NT 614 com os 160 kPa que o ID D1N16 sugere, em vez de 22,2;
     - serie de dois dias: + NT 616 e NT 618 (01/10/2024), se a Q1 permitir.
     """
-    base = {nt: ponto_envoltoria(nt) for nt in SERIE_D1N}
+    base = {nt: ponto_envoltoria(nt, criterio) for nt in SERIE_D1N}
 
-    sem_filtro = list(base.values()) + [ponto_envoltoria(TRAVADO_D1N)]
+    sem_filtro = list(base.values()) + [ponto_envoltoria(TRAVADO_D1N, "maximo")]
     sigma_do_id = [((160.0, t) if nt == 614 else (s, t)) for nt, (s, t) in base.items()]
-    dois_dias = list(base.values()) + [ponto_envoltoria(nt) for nt in D1N16_DIA_SEGUINTE]
+    dois_dias = list(base.values()) + [
+        ponto_envoltoria(nt, criterio) for nt in D1N16_DIA_SEGUINTE
+    ]
 
     variantes = [
         ("correta (7 ensaios que romperam)", list(base.values())),
@@ -196,11 +236,54 @@ def variantes_envoltoria() -> None:
     for nome, pontos in variantes:
         c, phi, r2 = ajustar(pontos)
         print(f"{nome:38s} {len(pontos):6d} {c:9.1f} {phi:12.1f} {r2:8.4f}")
-    t608 = ponto_envoltoria(TRAVADO_D1N)
+    print(f"(tau {'a 10 mm' if criterio == '10mm' else 'maximo da curva'})")
+    t608 = ponto_envoltoria(TRAVADO_D1N, "maximo")
     print(f"\nNT 608: sigma={t608[0]:.1f} kPa, tau max={t608[1]:.1f} kPa (nao rompeu)")
     for nt in D1N16_DIA_SEGUINTE:
-        s, t = ponto_envoltoria(nt)
+        s, t = ponto_envoltoria(nt, criterio)
         print(f"NT {nt}: sigma={s:.1f} kPa, tau={t:.1f} kPa (01/10/2024)")
+
+
+def curvas_d1n() -> None:
+    """Tabela das 7 curvas da serie D1N (slide 8 da apresentacao de 30/09). kPa, mm."""
+    print(f"{'NT':>4s} {'sigma':>7s} {'tau 10mm':>9s} {'tau max':>8s} {'em (mm)':>8s}"
+          f" {'desl. final':>12s}")
+    for nt in sorted(SERIE_D1N, key=lambda n: ponto_envoltoria(n)[0]):
+        df = etapa_cisalhamento(achar(nt))
+        d = df["Deslocamento Cisalhante [mm]"]
+        t = df["Tensao Cisalhante [kPa]"]
+        sigma = df["Tensao Normal [kPa]"].median()
+        t10 = tau_no_deslocamento(df, DESLOCAMENTO_RUPTURA)
+        print(f"{nt:4d} {sigma:7.1f} {t10:9.1f} {t.max():8.1f} {d[t.idxmax()]:8.2f}"
+              f" {d.iloc[-1]:12.2f}")
+
+
+def acervo_10mm() -> None:
+    """Quantos ensaios utilizaveis chegam a 10 mm e onde ficam as leituras vizinhas.
+
+    Utilizavel: etapa de cisalhamento com 5 ou mais leituras (triagem, 914).
+    """
+    from collections import Counter
+
+    utilizaveis, antes_5, antes_10, vizinhas = 0, 0, 0, Counter()
+    for caminho in sorted(CISALHAMENTO.glob("*.csv")):
+        df = etapa_cisalhamento(caminho)
+        if len(df) < 5:
+            continue
+        utilizaveis += 1
+        d = df["Deslocamento Cisalhante [mm]"].round(2)
+        if d.max() < 5:
+            antes_5 += 1
+        if d.max() < DESLOCAMENTO_RUPTURA:
+            antes_10 += 1
+            continue
+        vizinhas[(d[d <= 10].max(), d[d >= 10].min())] += 1
+    print(f"utilizaveis: {utilizaveis}")
+    print(f"param antes de 10 mm: {antes_10} (antes de 5 mm: {antes_5}; "
+          f"entre 5 e 10 mm: {antes_10 - antes_5})")
+    print(f"chegam a 10 mm: {sum(vizinhas.values())}")
+    for (a, b), n in vizinhas.most_common():
+        print(f"  leituras vizinhas {a:5.2f} e {b:5.2f} mm: {n}")
 
 
 if __name__ == "__main__":
@@ -211,3 +294,11 @@ if __name__ == "__main__":
         figura_envoltoria()
     if alvo in ("variantes", "all"):
         variantes_envoltoria()
+    if alvo in ("curvas-d1n", "all"):
+        curvas_d1n()
+    if alvo == "acervo-10mm":
+        acervo_10mm()
+    if alvo == "variantes-maximo":
+        variantes_envoltoria("maximo")
+    if alvo == "envoltoria-maximo":
+        figura_envoltoria("maximo")

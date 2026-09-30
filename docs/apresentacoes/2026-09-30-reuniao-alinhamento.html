@@ -397,6 +397,12 @@ figcaption { margin-top: 10px; }
 .grafico .serie-b { fill: none; stroke: var(--red); stroke-width: 4; stroke-dasharray: 10 7; stroke-linejoin: round; }
 .grafico .pts-b { fill: var(--red); }
 .grafico .reta { stroke: var(--red); stroke-width: 4; }
+.grafico .serie-d1n polyline { fill: none; stroke: var(--ink); stroke-width: 3; stroke-linejoin: round; }
+.grafico .ref10 { stroke: var(--ink); stroke-width: 1.5; stroke-dasharray: 6 6; }
+.grafico .picos circle { fill: var(--red); stroke: #fff; stroke-width: 2; }
+.grafico .rot-sigma text { font: 700 18px var(--font-display); fill: var(--ink); }
+.grafico .rot-sigma .cab { fill: var(--muted); font-weight: 400; font-family: var(--font-body); }
+.legenda i.pk { width: 14px; height: 14px; border: 0; border-radius: 50%; background: var(--red); }
 .grafico .chamada { stroke: var(--red); stroke-width: 1.5; }
 .grafico .pt { fill: var(--ink); }
 .grafico .pt.forte { fill: var(--red); }
@@ -561,37 +567,35 @@ figcaption { margin-top: 10px; }
       <nav class="marco" aria-label="Seções"><i class=""><b>01</b> Escopo</i><i class="on"><b>02</b> O que o acervo escondia</i><i class=""><b>03</b> O que mudou no sistema</i><i class=""><b>04</b> Onde está guardado</i><i class=""><b>05</b> Em aberto</i></nav>
     </section>
 
-    <!-- === SLIDE 08 · Ensaios que nunca rompem === -->
-    <section class="slide s-curvas" data-secao="2" data-title="Ensaios que nunca rompem">
+    <!-- === SLIDE 08 · Série D1N === -->
+    <section class="slide s-curvas" data-secao="2" data-title="Série D1N">
 
-      <p class="kicker reveal">02 · Achado 2 de 3 · ensaios que nunca rompem</p>
-      <h2 class="reveal">O NT 268 tem uma razão <span class="sym">τ</span>/<span class="sym">σ</span> comum — mas a curva nunca chega a um pico</h2>
+      <p class="kicker reveal">02 · Achado 2 de 3 · a série D1N</p>
+      <h2 class="reveal">Série D1N: sete ensaios, sete curvas — o <span class="sym">τ</span> a 10 mm de cada uma vira um ponto da envoltória</h2>
       <div class="corpo grade-2 reveal" style="--g2: 1.5fr 1fr">
         <figure>
-          <svg class="grafico" viewBox="0 0 1000 520" role="img" aria-label="NT 296 sobe até 1.182 kPa e rompe; NT 268 acelera até 794 kPa aos 3,3 mm e o arquivo acaba">
-          <g class="eixo"><line x1="80" x2="980" y1="460.0" y2="460.0"/><text x="66" y="466.0" text-anchor="end">0</text><line x1="80" x2="980" y1="374.0" y2="374.0"/><text x="66" y="380.0" text-anchor="end">250</text><line x1="80" x2="980" y1="288.0" y2="288.0"/><text x="66" y="294.0" text-anchor="end">500</text><line x1="80" x2="980" y1="202.0" y2="202.0"/><text x="66" y="208.0" text-anchor="end">750</text><line x1="80" x2="980" y1="116.0" y2="116.0"/><text x="66" y="122.0" text-anchor="end">1.000</text><line x1="80" x2="980" y1="30.0" y2="30.0"/><text x="66" y="36.0" text-anchor="end">1.250</text><text x="80.0" y="490" text-anchor="middle">0</text><text x="305.0" y="490" text-anchor="middle">5</text><text x="530.0" y="490" text-anchor="middle">10</text><text x="755.0" y="490" text-anchor="middle">15</text><text x="980.0" y="490" text-anchor="middle">20</text>
+          <svg class="grafico" viewBox="0 0 1000 520" role="img" aria-label="Sete curvas de tensão cisalhante por deslocamento da série D1N, de σ = 22 a 500 kPa, com o τ a 10 mm de cada uma marcado">
+          <g class="eixo"><line x1="80" x2="980" y1="460.0" y2="460.0"/><text x="66" y="466.0" text-anchor="end">0</text><line x1="80" x2="980" y1="374.0" y2="374.0"/><text x="66" y="380.0" text-anchor="end">100</text><line x1="80" x2="980" y1="288.0" y2="288.0"/><text x="66" y="294.0" text-anchor="end">200</text><line x1="80" x2="980" y1="202.0" y2="202.0"/><text x="66" y="208.0" text-anchor="end">300</text><line x1="80" x2="980" y1="116.0" y2="116.0"/><text x="66" y="122.0" text-anchor="end">400</text><line x1="80" x2="980" y1="30.0" y2="30.0"/><text x="66" y="36.0" text-anchor="end">500</text><text x="80.0" y="490" text-anchor="middle">0</text><text x="220.6" y="490" text-anchor="middle">5</text><text x="361.2" y="490" text-anchor="middle">10</text><text x="501.9" y="490" text-anchor="middle">15</text><text x="642.5" y="490" text-anchor="middle">20</text><text x="783.1" y="490" text-anchor="middle">25</text><text x="923.8" y="490" text-anchor="middle">30</text>
             <text x="66" y="14" text-anchor="end">τ (kPa)</text>
             <text x="980" y="518" text-anchor="end">deslocamento cisalhante (mm)</text></g>
-          <polyline class="serie-a" points="80.0,460.0 82.7,455.9 85.4,453.6 88.1,451.9 90.8,450.2 93.5,448.6 107.0,439.9 120.5,426.5 134.0,411.8 147.5,393.1 161.0,368.6 215.0,242.8 269.0,115.3 323.0,53.5 377.0,207.6 431.0,358.1 485.0,447.9 539.0,450.1 593.0,451.6 647.0,452.8 701.0,454.1 755.0,452.7 809.0,449.1 863.0,441.8 917.0,432.6 947.4,412.6"/>
-          <polyline class="serie-b" points="80.0,460.0 82.7,458.5 85.4,457.8 88.1,457.2 90.8,456.7 93.5,456.2 107.0,454.3 120.5,450.5 134.0,447.8 147.5,447.9 161.0,446.7 215.0,288.9 227.0,186.8"/>
-          <g class="pts-b"><circle cx="80.0" cy="460.0" r="5"/><circle cx="82.7" cy="458.5" r="5"/><circle cx="85.4" cy="457.8" r="5"/><circle cx="88.1" cy="457.2" r="5"/><circle cx="90.8" cy="456.7" r="5"/><circle cx="93.5" cy="456.2" r="5"/><circle cx="107.0" cy="454.3" r="5"/><circle cx="120.5" cy="450.5" r="5"/><circle cx="134.0" cy="447.8" r="5"/><circle cx="147.5" cy="447.9" r="5"/><circle cx="161.0" cy="446.7" r="5"/><circle cx="215.0" cy="288.9" r="5"/><circle cx="227.0" cy="186.8" r="5"/></g>
-          <text class="anot" x="341.0" y="59.5">NT 296 · pico 1.182 kPa, depois rompe</text>
-          <line class="chamada" x1="235.0" y1="192.8" x2="468" y2="262"/>
-          <text class="anot forte" x="478" y="262">NT 268 · 794 kPa aos 3,3 mm</text>
-          <text class="anot forte" x="478" y="288">sem pico — o arquivo acaba</text>
+          <line class="ref10" x1="361.2" x2="361.2" y1="460" y2="70"/>
+          <text class="anot" x="361.2" y="56" text-anchor="middle">10 mm · critério do laboratório</text>
+          <g class="serie-d1n"><polyline points="80.0,460.0 81.7,459.9 83.4,459.9 85.1,459.9 86.8,459.9 88.4,459.9 96.9,453.5 105.3,453.4 113.8,451.7 122.2,451.3 130.6,449.8 164.4,441.4 198.1,435.8 231.9,434.0 265.6,434.2 299.4,433.4 333.1,433.9 366.9,434.1 400.6,433.7 434.4,433.7 468.1,434.0 501.9,434.8 535.6,433.5 569.4,433.3 603.1,433.9 636.9,434.5 670.6,435.8 704.4,435.0 738.1,435.2 771.9,435.0 805.6,434.8 839.4,435.0 873.1,435.8 877.1,436.0"/><polyline points="80.0,460.0 81.7,458.5 83.4,457.0 85.1,456.8 86.8,456.2 88.4,455.4 96.9,443.2 105.3,435.0 113.8,429.6 122.2,426.9 130.6,421.3 164.4,412.9 198.1,409.9 231.9,410.6 265.6,410.6 299.4,408.5 333.1,406.7 366.9,405.8 400.6,405.2 434.4,404.7 468.1,403.9 501.9,403.2 535.6,403.3 569.4,402.1 603.1,402.1 636.9,402.0 670.6,401.6 704.4,404.3 738.1,403.0 771.9,403.9 805.6,406.1 839.4,404.4 867.6,405.1"/><polyline points="80.0,460.0 81.7,459.5 83.4,456.2 85.1,455.5 86.8,455.5 88.4,454.6 96.9,438.4 105.3,423.1 113.8,416.8 122.2,410.1 130.6,404.8 164.4,393.3 198.1,386.1 231.9,378.8 265.6,377.7 299.4,378.5 333.1,377.9 366.9,378.7 400.6,378.5 434.4,378.5 468.1,378.6 501.9,378.6 535.6,378.7 569.4,379.0 603.1,386.7 636.9,379.5 670.6,379.5 704.4,379.4 738.1,380.4 771.9,383.3 805.6,384.4 839.4,384.5 866.1,383.8"/><polyline points="80.0,460.0 81.7,460.0 83.4,460.0 85.1,460.0 86.8,460.0 88.4,460.0 96.9,442.9 105.3,427.7 113.8,416.2 122.2,406.7 130.6,398.5 164.4,374.9 198.1,350.5 231.9,334.8 265.6,325.6 299.4,320.6 333.1,314.2 366.9,313.1 400.6,313.7 434.4,314.2 468.1,316.8 501.9,319.0 535.6,322.1 569.4,327.7 603.1,333.2 636.9,338.2 670.6,341.1 704.4,344.0 738.1,347.1 771.9,348.7 805.6,353.1 839.4,352.3 873.1,357.0 876.6,357.6"/><polyline points="80.0,460.0 81.7,460.0 83.4,458.0 85.1,445.7 86.8,441.7 88.4,439.1 96.9,419.3 105.3,389.3 113.8,369.6 122.2,353.3 130.6,342.4 164.4,312.2 198.1,291.4 231.9,279.0 265.6,272.0 299.4,263.9 333.1,261.7 366.9,260.7 400.6,259.1 434.4,259.4 468.1,260.0 501.9,258.9 535.6,263.7 569.4,264.7 603.1,267.5 636.9,275.1 670.6,281.7 704.4,283.2 738.1,285.1 771.9,290.2 805.6,294.9 839.4,299.0 853.6,300.2"/><polyline points="80.0,460.0 81.7,458.4 83.4,454.7 85.1,447.4 86.8,438.4 88.4,424.1 96.9,376.7 105.3,344.0 113.8,320.2 122.2,306.9 130.6,291.8 164.4,264.8 198.1,243.9 231.9,235.4 265.6,235.7 299.4,228.6 333.1,239.6 366.9,242.2 400.6,238.2 434.4,239.8 468.1,241.1 501.9,242.1 535.6,243.6 569.4,252.6 603.1,266.7 636.9,269.8 670.6,272.2 704.4,274.9 738.1,270.7 771.9,282.7 805.6,280.5 839.4,280.2 873.1,279.1 874.3,281.4"/><polyline points="80.0,460.0 81.7,457.2 83.4,455.6 85.1,455.1 86.8,451.8 88.4,444.5 96.9,397.5 105.3,344.2 113.8,309.2 122.2,289.2 130.6,278.7 164.4,244.2 198.1,198.0 231.9,176.5 265.6,175.8 299.4,174.1 333.1,172.0 366.9,170.7 400.6,173.2 434.4,176.1 468.1,176.6 501.9,178.1 535.6,177.5 569.4,177.4 603.1,179.8 636.9,186.6 670.6,193.5 704.4,196.1 738.1,208.1 771.9,221.1 805.6,215.1 839.4,227.0 873.1,229.5 896.6,223.3"/></g>
+          <g class="picos"><circle cx="361.2" cy="434.0" r="7"/><circle cx="361.2" cy="405.9" r="7"/><circle cx="361.2" cy="378.6" r="7"/><circle cx="361.2" cy="313.3" r="7"/><circle cx="361.2" cy="260.9" r="7"/><circle cx="361.2" cy="241.8" r="7"/><circle cx="361.2" cy="170.9" r="7"/></g>
+          <g class="rot-sigma"><text class="cab" x="908.6" y="193.3">σ (kPa)</text><text x="889.1" y="442.0">22</text><text x="879.6" y="411.1">80</text><text x="878.1" y="389.1">120</text><text x="888.6" y="363.6">200</text><text x="865.6" y="306.2">300</text><text x="886.3" y="284.2">400</text><text x="908.6" y="229.3">500</text></g>
         </svg>
-          <p class="legenda"><span><i></i>NT 296 · <span class="sym">σ</span> = 50 kPa · rompe</span><span><i class="tr"></i>NT 268 · <span class="sym">σ</span> = 399 kPa · travado</span></p>
+          <p class="legenda"><span><i></i>7 ensaios · 30/09/2024 · rótulo = <span class="sym">σ</span></span><span><i class="pk"></i><span class="sym">τ</span> a 10 mm · critério do laboratório</span></p>
         </figure>
         <div>
-          <div class="bloco"><h3>O que o dado mostra</h3>
-            <p>O NT 268 marca <b><span class="sym">τ</span> = 794 kPa sob <span class="sym">σ</span> = 399 kPa</b> e só acelera até o arquivo acabar: os dois últimos pontos são <b>41× mais rígidos</b> que o resto do ensaio.</p></div>
-          <div class="bloco interp"><h3>Hipótese, não confirmada</h3>
-            <p>NT 296 como solo-cimento é leitura a partir do identificador.</p></div>
-          <div class="bloco decisao"><h3>Por que importa</h3>
-            <p>A planilha lê o máximo de <span class="sym">τ</span> e importaria 794 kPa como resistência.</p></div>
+          <div class="bloco"><h3>O que o gráfico mostra</h3>
+            <p><span class="sym">σ</span> de 22 a 500 kPa, todos até cerca de <b>28 mm</b>. Com <span class="sym">σ</span> alto a curva tem pico e depois cai; com <span class="sym">σ</span> baixo fica quase plana.</p></div>
+          <div class="bloco interp"><h3>Fora do gráfico</h3>
+            <p>NT 608 (<span class="sym">σ</span> = 160 kPa), da mesma série: 1.755 kPa aos 3,7 mm, sem romper. O NT 612 não tem etapa de cisalhamento.</p></div>
+          <div class="bloco decisao"><h3>Vai para a envoltória</h3>
+            <p><span class="sym">τ</span> a 10 mm de cada curva: <b>c = 22,6 kPa, <span class="sym">φ</span> = 32,2°, R² = 0,980</b> (slide 11). Pelo máximo da curva, seriam 24,0 kPa e 32,6°.</p></div>
         </div>
       </div>
-      <p class="fonte reveal">docs/registros/2026-09-12-ensaios-travados.md · curvas: <code>scripts/apoio_apresentacao.py</code> (arquivos brutos)</p>
+      <p class="fonte reveal">docs/registros/2026-09-29-ruptura-a-10mm.md · NT 608: 2026-09-12-ensaios-travados.md · conferir: <code>uv run python scripts/apoio_apresentacao.py curvas-d1n</code></p>
       <footer class="rodape"><span>Reunião de alinhamento · PIBITI 2026 · GeoFluxo — UnB</span><span class="pg">08 / 18</span></footer>
       <nav class="marco" aria-label="Seções"><i class=""><b>01</b> Escopo</i><i class="on"><b>02</b> O que o acervo escondia</i><i class=""><b>03</b> O que mudou no sistema</i><i class=""><b>04</b> Onde está guardado</i><i class=""><b>05</b> Em aberto</i></nav>
     </section>
@@ -600,7 +604,7 @@ figcaption { margin-top: 10px; }
     <section class="slide s-funil" data-secao="2" data-title="O filtro em ação">
 
       <p class="kicker reveal">02 · Achado 2 de 3 · o filtro em ação</p>
-      <h2 class="reveal">O processamento manual lê o máximo de <span class="sym">τ</span>. Não tem como ver que a curva nunca rompeu.</h2>
+      <h2 class="reveal">Os travados param antes de 4 mm: não existe <span class="sym">τ</span> a 10 mm — e o máximo que sobra não é ruptura</h2>
       <div class="corpo grade-2 reveal" style="--g2: 1.3fr 1fr">
         <div>
           <ul class="funil num"><li class=""><span class="f-rot">Etapa de cisalhamento utilizável</span><span class="f-barra"><i style="width:100.0%"></i></span><span class="f-num">914</span></li><li class=""><span class="f-rot">Pararam antes de 5 mm</span><span class="f-barra"><i style="width:1.4%"></i></span><span class="f-num">13</span></li><li class=""><span class="f-rot"><span class='sym'>τ</span> de pico no último ponto</span><span class="f-barra"><i style="width:46.1%"></i></span><span class="f-num">421</span></li><li class="forte"><span class="f-rot">Os dois juntos — não romperam</span><span class="f-barra"><i style="width:1.0%"></i></span><span class="f-num">9</span></li><li class="forte"><span class="f-rot">Destes, com o trecho final acelerando</span><span class="f-barra"><i style="width:0.6%"></i></span><span class="f-num">3</span></li></ul>
@@ -667,27 +671,27 @@ figcaption { margin-top: 10px; }
       <h2 class="reveal">Os 7 ensaios da série D1N que passam no filtro fecham uma envoltória sozinhos</h2>
       <div class="corpo grade-2 reveal" style="--g2: 1.5fr 1fr">
         <figure>
-          <svg class="grafico" viewBox="0 0 1000 520" role="img" aria-label="Envoltória de Mohr-Coulomb da série D1N: 7 pontos, φ = 32,6°, c = 24,0 kPa, R² = 0,987">
+          <svg class="grafico" viewBox="0 0 1000 520" role="img" aria-label="Envoltória de Mohr-Coulomb da série D1N: 7 pontos, τ a 10 mm, φ = 32,2°, c = 22,6 kPa, R² = 0,980">
           <g class="eixo"><line x1="80" x2="980" y1="460.0" y2="460.0"/><text x="66" y="466.0" text-anchor="end">0</text><line x1="80" x2="980" y1="352.5" y2="352.5"/><text x="66" y="358.5" text-anchor="end">100</text><line x1="80" x2="980" y1="245.0" y2="245.0"/><text x="66" y="251.0" text-anchor="end">200</text><line x1="80" x2="980" y1="137.5" y2="137.5"/><text x="66" y="143.5" text-anchor="end">300</text><line x1="80" x2="980" y1="30.0" y2="30.0"/><text x="66" y="36.0" text-anchor="end">400</text><text x="80.0" y="490" text-anchor="middle">0</text><text x="240.7" y="490" text-anchor="middle">100</text><text x="401.4" y="490" text-anchor="middle">200</text><text x="562.1" y="490" text-anchor="middle">300</text><text x="722.9" y="490" text-anchor="middle">400</text><text x="883.6" y="490" text-anchor="middle">500</text>
             <text x="66" y="14" text-anchor="end">τ (kPa)</text>
             <text x="980" y="518" text-anchor="end"><tspan class="sym">σ</tspan> normal (kPa)</text></g>
-          <line class="reta" x1="80.0" y1="434.2" x2="980.0" y2="49.2"/>
-          <circle class="pt" cx="208.2" cy="386.9" r="9"/><circle class="pt" cx="272.6" cy="357.1" r="9"/><circle class="pt" cx="883.5" cy="98.3" r="9"/><circle class="pt" cx="722.7" cy="170.7" r="9"/><circle class="pt" cx="561.9" cy="208.6" r="9"/><circle class="pt" cx="401.1" cy="276.4" r="9"/><circle class="pt forte" cx="115.7" cy="426.6" r="11"/>
+          <line class="reta" x1="80.0" y1="435.7" x2="980.0" y2="56.3"/>
+          <circle class="pt" cx="208.2" cy="392.4" r="9"/><circle class="pt" cx="272.6" cy="358.3" r="9"/><circle class="pt" cx="883.5" cy="98.6" r="9"/><circle class="pt" cx="722.7" cy="187.2" r="9"/><circle class="pt" cx="561.9" cy="211.1" r="9"/><circle class="pt" cx="401.1" cy="276.6" r="9"/><circle class="pt forte" cx="115.7" cy="427.5" r="11"/>
           <text class="anot forte" x="139.7" y="452.6">NT 614 · o ID dizia 160 kPa</text>
-          <text class="anot" x="980" y="250" text-anchor="end">τ = 24,0 + <tspan class="sym">σ</tspan> · tan 32,6°</text>
+          <text class="anot" x="980" y="250" text-anchor="end">τ = 22,6 + <tspan class="sym">σ</tspan> · tan 32,2°</text>
         </svg>
-          <p class="legenda">Série D1N, 30/09/2024 · 7 ensaios que romperam · <span class="sym">σ</span> medido pela máquina</p>
+          <p class="legenda"><span>Série D1N, 30/09/2024 · 7 ensaios que romperam · <span class="sym">σ</span> medido pela máquina · <span class="sym">τ</span> a 10 mm</span></p>
         </figure>
         <div>
           <div class="stats stats-v">
-            <div class="forte"><p class="stat-v">32,6°</p><p class="stat-l"><span class="sym">φ</span>, ângulo de atrito</p></div>
-            <div><p class="stat-v">24,0 kPa</p><p class="stat-l">c, coesão</p></div>
-            <div><p class="stat-v">0,987</p><p class="stat-l">R²</p></div>
+            <div class="forte"><p class="stat-v">32,2°</p><p class="stat-l"><span class="sym">φ</span>, ângulo de atrito</p></div>
+            <div><p class="stat-v">22,6 kPa</p><p class="stat-l">c, coesão</p></div>
+            <div><p class="stat-v">0,980</p><p class="stat-l">R²</p></div>
           </div>
-          <p class="nota">O ponto a 22 kPa é o NT 614: o ID dizia 160 kPa. Com o <span class="sym">σ</span> do nome, a coesão sairia negativa (−0,9 kPa) — ver slide 12. Sem o filtro de ruptura, o ensaio travado da série entraria e o R² cairia para 0,001.</p>
+          <p class="nota">O ponto a 22 kPa é o NT 614: o ID dizia 160 kPa. Com o <span class="sym">σ</span> do nome, a coesão sairia negativa (−2,1 kPa) — ver slide 12. Sem o filtro de ruptura, o ensaio travado da série entraria e o R² cairia para 0,001.</p>
         </div>
       </div>
-      <p class="fonte reveal">docs/registros/2026-09-29-envoltoria-d1n.md · conferir: <code>uv run python scripts/apoio_apresentacao.py variantes</code></p>
+      <p class="fonte reveal">docs/registros/2026-09-29-ruptura-a-10mm.md · conferir: <code>uv run python scripts/apoio_apresentacao.py variantes</code></p>
       <footer class="rodape"><span>Reunião de alinhamento · PIBITI 2026 · GeoFluxo — UnB</span><span class="pg">11 / 18</span></footer>
       <nav class="marco" aria-label="Seções"><i class=""><b>01</b> Escopo</i><i class="on"><b>02</b> O que o acervo escondia</i><i class=""><b>03</b> O que mudou no sistema</i><i class=""><b>04</b> Onde está guardado</i><i class=""><b>05</b> Em aberto</i></nav>
     </section>

@@ -125,7 +125,10 @@ Verificações que sustentam a hipótese:
 - [ ] O que significam `N`, `S`, `U`, `W`, `A`? (natural / saturado / úmido / …?)
 - [ ] A regra de agrupamento **mesma amostra + mesma condição + mesmo dia de ensaio**
       está correta para montar uma envoltória?
-- [ ] τ de pico deve ser o máximo da curva, ou lido a uma deformação especificada?
+- [x] τ de pico deve ser o máximo da curva, ou lido a uma deformação especificada?
+      **τ a 10 mm de deslocamento cisalhante**, o critério do laboratório (informado pelo aluno
+      em 29/09/2026; `docs/registros/2026-09-29-ruptura-a-10mm.md`). Em aberto: os 103 ensaios
+      utilizáveis que param entre 5 e 10 mm.
 
 ## 5. Qualidade dos dados
 

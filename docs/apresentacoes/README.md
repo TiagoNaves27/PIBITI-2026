@@ -33,7 +33,7 @@ orientador e outras apresentações.
 | --- | --- |
 | 16/09/2026 | [Reunião de alinhamento](2026-09-16-reuniao-alinhamento.html) |
 | 29/09/2026 | [Teste de design — Terra oficial](2026-09-29-teste-design-terra.html) e [Teste de design — GeoFluxo real](2026-09-29-teste-design-geofluxo.html) |
-| 30/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-30-reuniao-alinhamento.html) (versão a apresentar) |
+| 30/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-30-reuniao-alinhamento.html) (versão a apresentar) · [roteiro de fala](2026-09-30-reuniao-alinhamento-roteiro.md) |
 
 ---
 
@@ -54,10 +54,10 @@ Os gráficos são desenhados no próprio slide, a partir dos mesmos dados de
 | 5 | O acervo, em números | `2026-09-12-mudanca-de-escopo.md`; `2026-09-12-triagem-do-acervo.md` |
 | 6 | Divisor: o que o acervo escondia | resume os slides 7 a 13 |
 | 7 | Triagem do acervo | `2026-09-12-triagem-do-acervo.md` |
-| 8 | Ensaios que nunca rompem (NT 268 × NT 296) | `2026-09-12-ensaios-travados.md` (NT 268: 794 kPa, 3,3 mm, 41×); curvas de `scripts/apoio_apresentacao.py` sobre os `.csv` brutos |
-| 9 | O filtro em ação | `2026-09-12-ensaios-travados.md` (funil 914 → 3; NT 268 e NT 625) |
+| 8 | Série D1N: as sete curvas e o τ a 10 mm | `2026-09-29-ruptura-a-10mm.md` (τ a 10 mm, c, φ, R²; valores por ensaio em `apoio_apresentacao.py curvas-d1n`); `2026-09-29-envoltoria-d1n.md` (série, NT 612, máximo: 24,0 kPa e 32,6°); NT 608 de `2026-09-12-ensaios-travados.md`. Curvas acima de 550 kPa ficam fora, por pedido do aluno (só exclui o NT 608) |
+| 9 | O filtro em ação | `2026-09-12-ensaios-travados.md` (funil 914 → 3; NT 268 e NT 625); título a partir de `2026-09-29-ruptura-a-10mm.md` (o laboratório lê τ a 10 mm) |
 | 10 | Forma, não magnitude | `2026-09-12-forma-da-curva.md`; razão 2× do NT 268 calculada de `2026-09-12-ensaios-travados.md` (794 / 399) |
-| 11 | A envoltória que sobra | `docs/registros/2026-09-29-envoltoria-d1n.md` (c, φ, R² e as variantes); NT 614 de `2026-09-12-id-nao-e-dado.md` |
+| 11 | A envoltória que sobra | `docs/registros/2026-09-29-ruptura-a-10mm.md` (c, φ, R² e as variantes com τ a 10 mm); NT 614 de `2026-09-12-id-nao-e-dado.md` |
 | 12 | O formato do ID | `2026-09-12-id-nao-e-dado.md`; plano de padronizar o ID vem da apresentação de 16/09 |
 | 13 | Dois layouts | `2026-09-13-dois-layouts.md` |
 | 14 | Citação | `2026-09-13-dois-layouts.md` §O que ficou em aberto |
@@ -65,6 +65,12 @@ Os gráficos são desenhados no próprio slide, a partir dos mesmos dados de
 | 16 | Repositório no GitHub | captura de tela `figuras/repositorio-github.png` |
 | 17 | Em aberto | `perguntas-orientador.md` (Q1, Q7); `2026-09-12-forma-da-curva.md` (NT 923); `2026-09-12-mudanca-de-escopo.md` (triaxial) |
 | 18 | Obrigado | — (fechamento) |
+
+**Critério de τ, desde 29/09 (noite).** Os slides 8 e 11 usam τ a 10 mm de deslocamento, o
+critério do laboratório, registrado em
+[`2026-09-29-ruptura-a-10mm.md`](../registros/2026-09-29-ruptura-a-10mm.md). O slide 8 deixou
+de ser o NT 268 × NT 296 e virou as sete curvas da série D1N; o título do slide 9 deixou de
+dizer que o processamento manual lê o máximo de τ.
 
 **Rastreabilidade do slide 11.** φ = 32,6°, c = 24,0 kPa e R² = 0,987 tinham vindo só do
 script de apoio; desde 29/09 têm registro próprio,

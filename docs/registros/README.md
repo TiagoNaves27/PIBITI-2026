@@ -61,6 +61,7 @@ Do mais recente para o mais antigo.
 
 | Data | Registro |
 | --- | --- |
+| 29/09/2026 | [O laboratório lê τ a 10 mm, não no máximo da curva — e a envoltória D1N passa a ser c = 22,6 kPa, φ = 32,2°](2026-09-29-ruptura-a-10mm.md) |
 | 29/09/2026 | [A série D1N fecha uma envoltória com R² = 0,987 — mas só depois dos dois filtros](2026-09-29-envoltoria-d1n.md) |
 | 13/09/2026 | [As máquinas gravam dois layouts com a mesma extensão, e nenhuma forma de ler avisa quando você erra o tipo](2026-09-13-dois-layouts.md) |
 | 12/09/2026 | [O ensaio com a maior razão τ/σ do acervo é um dos bons — a magnitude não separa nada](2026-09-12-forma-da-curva.md) |
@@ -79,4 +80,4 @@ Do mais recente para o mais antigo.
 | `scripts/id_versus_sigma.py` | identificadores repetidos com σ divergente: 748, 96, 6 |
 | `scripts/comparar_layouts.py` | os dois layouts e os três modos de falha |
 | `scripts/figura_*.py` | as figuras, a partir dos scripts acima |
-| `scripts/apoio_apresentacao.py` | a envoltória D1N e suas variantes (`variantes`: 24,0 kPa, 32,6°, 0,987) e as figuras `envoltoria-d1n.png` e `forma-da-curva-268.png` |
+| `scripts/apoio_apresentacao.py` | a envoltória D1N e suas variantes com τ a 10 mm (`variantes`: 22,6 kPa, 32,2°, 0,980) e pelo máximo (`variantes-maximo`: 24,0 kPa, 32,6°, 0,987); as curvas D1N (`curvas-d1n`); o acervo a 10 mm (`acervo-10mm`: 914, 116, 798); as figuras `envoltoria-d1n-10mm.png`, `envoltoria-d1n.png` e `forma-da-curva-268.png` |

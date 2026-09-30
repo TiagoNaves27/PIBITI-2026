@@ -147,6 +147,10 @@ limite.
 deslocamento limite se houver. Se ele disser "é o máximo", pergunte o que ele faz quando a
 curva tem ruído.
 
+**Respondida em parte (29/09/2026):** o laboratório lê τ a **10 mm** de deslocamento
+(`docs/registros/2026-09-29-ruptura-a-10mm.md`). Falta: o que se faz com os 103 ensaios que
+param entre 5 e 10 mm, e se os 10 mm valem também quando a curva tem pico claro antes.
+
 ## Q5 · Permissão
 
 Os IDs mostram AUGUSTO, GAB, PAULO — são ensaios de outras pessoas. A campanha de 2026, que

@@ -135,3 +135,4 @@ laboratório**, para não depender de rodar ensaios novos.
 | 11/09/2026 | Raspberry Pi removido do escopo | máquinas já digitalizam os dados |
 | 11/09/2026 | SQLite no desenvolvimento, MySQL na entrega | economiza horas de administração |
 | 11/09/2026 | CLI + PDF antes de GUI | GUI não produz resultado científico |
+| 29/09/2026 | τ de cada ensaio lido a 10 mm de deslocamento, interpolado | é o critério do laboratório (`registros/2026-09-29-ruptura-a-10mm.md`) |
