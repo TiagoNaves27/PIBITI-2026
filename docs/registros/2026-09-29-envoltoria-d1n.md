@@ -21,7 +21,7 @@ anuncia 160 kPa quando a máquina mediu 22 ([o ID não é dado](2026-09-12-id-na
 dois registros descrevem o que cada erro faria com a envoltória — "levanta a reta inteira",
 "puxa a reta para baixo e reduz o φ" — mas nenhum dos dois calculou.
 
-A apresentação ao orientador de 29/09 precisava de um gráfico para o resultado do slide de
+A apresentação ao orientador de 30/09 precisava de um gráfico para o resultado do slide de
 abertura. A série D1N era a candidata natural: é a que os registros já conhecem ponto a ponto.
 A envoltória foi calculada e, na mesma passada, recalculada com cada um dos erros que os
 filtros evitam, para medir o efeito em vez de descrevê-lo.
@@ -143,7 +143,7 @@ atravessar o dia muda o φ em 0,3°.
 ## O que eu decidi
 
 **A envoltória da série D1N de 30/09/2024 tem os sete ensaios que romperam, com σ medido.**
-É o que o script calcula e o que a apresentação de 29/09 mostra (slide 11).
+É o que o script calcula e o que a apresentação de 30/09 mostra (slide 11).
 
 A alternativa descartada, por enquanto, era incluir o NT 616 e o NT 618, do dia seguinte. Os
 números mostram que o efeito é pequeno, mas incluir é decidir a Q1 sem o orientador — e a regra
@@ -164,7 +164,7 @@ porque o gráfico sozinho não mostra por que ele merece confiança; as variante
 - **A regra de agrupamento e as 51 envoltórias:** `docs/arquitetura/formato-bruto.md` §6;
   `docs/arquitetura/perguntas-orientador.md` §Abertura e §Q1.
 - **O script:** `scripts/apoio_apresentacao.py` (`variantes`, `envoltoria`).
-- **Onde aparece:** `docs/apresentacoes/2026-09-29-reuniao-alinhamento.html`, slide 11.
+- **Onde aparece:** `docs/apresentacoes/2026-09-30-reuniao-alinhamento.html`, slide 11.
 
 ## O que ficou em aberto
 

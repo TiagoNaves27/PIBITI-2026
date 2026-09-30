@@ -33,11 +33,11 @@ orientador e outras apresentações.
 | --- | --- |
 | 16/09/2026 | [Reunião de alinhamento](2026-09-16-reuniao-alinhamento.html) |
 | 29/09/2026 | [Teste de design — Terra oficial](2026-09-29-teste-design-terra.html) e [Teste de design — GeoFluxo real](2026-09-29-teste-design-geofluxo.html) |
-| 29/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-29-reuniao-alinhamento.html) (versão a apresentar) |
+| 30/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-30-reuniao-alinhamento.html) (versão a apresentar) |
 
 ---
 
-## Reunião de alinhamento — 29/09/2026 (Swiss Modern)
+## Reunião de alinhamento — 30/09/2026 (Swiss Modern)
 
 A versão a apresentar. Junta o conteúdo da reestruturação de 29/09 (abaixo) com slides novos
 tirados direto dos registros — dois layouts, critério de não-ruptura, tabela dos seis
@@ -106,7 +106,7 @@ para comparar direção visual antes de fechar uma única versão:
   - `docs/registros/figuras/envoltoria-d1n.png` — envoltória dos 7 ensaios da série D1N.
 
 **Decidido em 29/09/2026:** nenhuma das duas linhas — o estilo final é o **Swiss Modern**
-(`ESTILO.md`), aplicado na apresentação de 29/09 acima. Os dois testes e a apresentação de
+(`ESTILO.md`), aplicado na apresentação de 30/09 acima. Os dois testes e a apresentação de
 16/09 ficam como registro histórico, sem alteração.
 
 ---
