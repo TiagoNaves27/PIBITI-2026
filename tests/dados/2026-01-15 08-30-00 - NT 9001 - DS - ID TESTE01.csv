@@ -1,0 +1,11 @@
+﻿Numero do Teste;9001
+ID do ensaio;TESTE01
+Formato CP;Cilindrico
+Tipo de Controle;Tensao
+Dimensao Secao [mm];60
+Altura Inicial [mm];20
+Tempo de aquisicao;Personalizado
+Data;Hora;Etapa;Tempo Etapa [min];Tensao Normal [kPa];Deslocamento Normal [mm];Altura Atual [mm];Deformacao Normal [%];Tensao Cisalhante [kPa];Deslocamento Cisalhante [mm];Deformacao Cisalhante [%];Tempo Ensaio [min];Velocidade Cisalhamento [mm/min];Area Corrigida [mm2];Carga Vertical [kg];Carga Horizontal [kg];Carga Horizontal Absoluta [kg]
+15/01/2026;08:30:00;Adensamento;0;0;0;20;0;0;0;0;0;0;0;0;0;0
+15/01/2026;08:31:00;Adensamento;1;100;0,5;19,5;2,5;0;0;0;1;0;2827,433;28,8;0;0
+15/01/2026;08:40:00;Cisalhamento;9;200;-0,25;19,75;-1,25;50;2,5;12,5;10;1,5;2500;57,6;14,4;14,4

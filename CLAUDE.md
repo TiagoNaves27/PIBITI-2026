@@ -84,3 +84,62 @@ Nunca commitar `.env`, dados brutos de ensaio ou PDFs de referência.
 - Cada função de cálculo novo precisa de teste com valor de referência conferido à mão
   ou vindo de exemplo de norma/livro (ASTM, Head, Pinto, Das).
 - Ao mudar escopo/arquitetura, atualizar `docs/arquitetura/visao-geral.md` no mesmo passo.
+
+## Registros
+
+`docs/registros/` guarda um arquivo por momento que vale contar. Regras completas no
+`README.md` de lá; o essencial:
+
+- **Vira registro:** um número que vai ter que ser defendido; uma decisão com alternativa
+  descartada; algo que o processamento manual não pegaria; uma surpresa que contrariou o
+  que se supunha.
+- **Não vira registro:** trabalho de rotina. "Escrevi o parser" não; "descobri que as
+  máquinas gravam dois layouts e nenhuma forma de ler avisa quando você errou o tipo" sim.
+- **Todo número citado vem de script versionado em `scripts/`**, que reproduz o valor. Número
+  que só existe porque alguém rodou algo uma vez não entra.
+- **Figura gerada por script**, em `docs/registros/figuras/`, com a paleta acima. Nunca print
+  de tela — não se regenera quando o dado muda e não tem resolução para projetor.
+- **Registro não se corrige por cima.** Número que mudar gera registro novo explicando a
+  mudança; o antigo fica.
+- **Separar o que o dado mostra do que é interpretação**, em parágrafos rotulados. Dedução a
+  partir dos arquivos vai marcada como dedução, com o que falta para confirmá-la.
+- **Nunca inventar contexto.** Não afirmar o que ninguém disse — como o laboratório
+  trabalhava, o que o operador pretendia, por que um ensaio foi feito. Se não veio de uma
+  pessoa, de um arquivo, ou de dedução declarada como tal, não entra. Vale para todos os
+  documentos do projeto, não só para os registros.
+
+## Explicar, não só entregar
+
+**É a primeira vez que o aluno faz um projeto assim.** Programação, versionamento, linha de
+comando e o vocabulário que vem junto são todos novos. Ele acompanha bem quando o porquê vem
+junto — o que falta é vocabulário, não capacidade. Não presuma que um termo é conhecido só
+porque é básico para quem já programa.
+
+- **Todo termo técnico ganha uma explicação curta na primeira vez que aparece.** Vale para
+  jargão de código (*parser*, *fixture*, *dataclass*, *lint*, *regex*, *BOM*, *LF/CRLF*),
+  de Git (*commit*, *branch*, *remote*, *staged*) e de estatística (*R²*, *regressão*,
+  *resíduo*). Uma frase basta — não vire aula, não interrompa o trabalho.
+- **Explicado uma vez, está explicado — não repetir.** Termo já explicado volta a ser usado
+  seco, como se ele sempre tivesse sabido. Nem versão resumida, nem lembrete entre
+  parênteses: repetir sugere que ele não entendeu da primeira vez, e é exatamente o tipo de
+  coisa que cansa. Ele pede de novo quando esquecer — e aí explicar direto, sem "como eu
+  disse antes".
+- **`docs/glossario.md` é o registro do que já foi explicado.** Termo que está lá já passou:
+  usar seco, e no máximo apontar o glossário. Termo novo que precisou de explicação **entra
+  lá no mesmo passo**, com o exemplo concreto do projeto onde ele apareceu.
+- **Na dúvida, não explique.** Entre uma sessão e outra não há registro além do glossário.
+  Dois sinais resolvem o resto: se ele usou o termo espontaneamente, está aprendido; se o
+  termo aparece escrito em `docs/` ou num comentário do código do projeto, já passou por
+  ele. Errar para o lado de não explicar é melhor — explicação faltando ele pede,
+  explicação repetida ele engole calado.
+- **Todo comando vem com o que ele faz e como saber se deu certo.** Não `git add -A` solto,
+  mas o que ele marca e o que a tela deve mostrar depois. Ele precisa distinguir sucesso de
+  erro sozinho.
+- **Ao propor uma decisão técnica, diga a alternativa e o que se perde com ela.** Uma escolha
+  sem alternativa declarada não ensina nada e não pode ser contestada.
+- Se a explicação passar de dois parágrafos, ela vira arquivo em `docs/` — não some no
+  terminal junto com o resto da sessão.
+- Perguntar "quer que eu explique X?" é pior do que explicar X em uma frase e seguir em
+  frente. Ele não sabe ainda se precisa de X.
+- Nomear o que está acontecendo vale mais que suavizar: dizer "isso é uma falha silenciosa,
+  o código não dá erro e produz número errado" ensina; dizer "tive um probleminha" não.

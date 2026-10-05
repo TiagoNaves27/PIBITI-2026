@@ -1,0 +1,11 @@
+# Os CSV do acervo sao dados brutos gravados pelas maquinas de ensaio: LF, sem
+# quebra de linha final, BOM no inicio. Este repositorio e usado no Windows, onde
+# core.autocrlf=true faria o Git entregar CRLF num clone novo -- os bytes mudariam
+# em relacao ao que a maquina gravou.
+#
+# `-text` desliga qualquer conversao: o arquivo chega a qualquer maquina exatamente
+# como saiu do equipamento. Isso importa se um dia o sistema guardar hash de arquivo
+# bruto para rastreabilidade. O custo e que `git diff` passa a dizer apenas
+# "Binary files differ" para esses arquivos -- aceitavel, porque sao arquivos de
+# acervo, gravados uma vez e nunca editados.
+*.csv -text

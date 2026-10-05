@@ -46,23 +46,40 @@ preencha. Esse arquivo é o que você manda para o orientador.
 - **Entregável:** notebook lendo o arquivo com as colunas certas e números como número
       (não como texto)
 
-### Semana 5 — Parser do cisalhamento direto
-- [ ] `src/geotec/parsers/direto.py`: função que recebe caminho e devolve DataFrame normalizado
+### Semana 5 — Parser do cisalhamento direto ✅ 12/09/2026
+- [x] `src/geotec/parsers/direto.py`: função que recebe caminho e devolve DataFrame normalizado
 - **Entregável:** a função funcionando no arquivo de exemplo
 - **Mostrar:** DataFrame limpo, com as colunas do §5 de `visao-geral.md`
+- **Resultado:** roda nos **1.045** arquivos DS/DSS do acervo, não só num exemplo.
+  Os 36 ODC são recusados de propósito — outro layout, ver `formato-bruto.md` §1.1.
 
-### Semana 6 — Teste do parser
-- [ ] `tests/test_parser_direto.py`: conferir nº de linhas, nomes de coluna e um valor
+### Semana 6 — Teste do parser ✅ 12/09/2026
+- [x] `tests/test_parser_direto.py`: conferir nº de linhas, nomes de coluna e um valor
       específico que você checou à mão no arquivo original
 - **Entregável:** `uv run pytest` verde
+- **Resultado:** 19 testes. Valores conferidos à mão em dois arquivos — um sintético com
+  números redondos e o NT 1149 do acervo.
 
-### Semana 7 — Extrair os metadados do cabeçalho
-- [ ] Ler do cabeçalho: identificação da amostra, data, tensão normal, dimensões do corpo de prova
-- **Entregável:** função devolvendo um dicionário de metadados
+### Semana 7 — Extrair os metadados do cabeçalho ✅ 12/09/2026 (junto com a 5)
+- [x] Ler do cabeçalho: identificação da amostra, data, dimensões do corpo de prova
+- **Entregável:** função devolvendo um dicionário de metadados — saiu como a dataclass
+  `direto.Metadados`, que o type checker confere e um dicionário não conferiria.
+- **Correção ao plano:** a **tensão normal não está no cabeçalho**. Ela é uma coluna de
+  dados, medida a cada leitura, e o ID do ensaio que parece anunciá-la mente às vezes
+  (`formato-bruto.md` §5.5). Sai do cabeçalho e vira trabalho da rotina de qualidade.
 
-### Semana 8 — Parser do triaxial
+> **Três semanas de folga.** A Fase 1 estava dimensionada para um formato desconhecido; ele
+> já está mapeado. Use a folga na rotina de qualidade (`formato-bruto.md` §5.4), que é o
+> conteúdo do artigo, e não em adiantar a Semana 8.
+
+### Semana 8 — Parser do triaxial — ⛔ **bloqueada por falta de dado**
 - [ ] Mesmo trabalho das semanas 5–7 aplicado ao arquivo do triaxial
 - **Entregável:** parser + teste
+- **Não há um único arquivo triaxial no acervo** (`visao-geral.md` §5.3). Parser escrito às
+  cegas não pode ser testado, e o que não é testado não conta. Enquanto não chegar arquivo,
+  gaste esta semana na rotina de qualidade.
+- Se quiser destravar: peça um arquivo exportado da máquina triaxial, mesmo que de um ensaio
+  antigo ou interrompido. Um arquivo basta para começar.
 
 ### Semana 9 — Folga / acabamento
 - [ ] Terminar o que atrasou; rodar os dois parsers em todos os arquivos que conseguir
@@ -76,12 +93,13 @@ preencha. Esse arquivo é o que você manda para o orientador.
 - **Mostrar:** a lista de fórmulas — peça ao orientador para conferir. Este é o momento mais
   barato de descobrir que uma fórmula está errada.
 
-### Semana 12 — Tensões do cisalhamento direto
-- [ ] `nucleo/cisalhamento_direto.py`: tensão normal e cisalhante a partir de força e área
-- [ ] Teste com valor conferido à mão na calculadora
+### ~~Semana 12 — Tensões do cisalhamento direto~~ — fora do escopo
+### ~~Semana 13 — Correção de área~~ — fora do escopo
 
-### Semana 13 — Correção de área
-- [ ] Área corrigida em função do deslocamento (a norma define como)
+A máquina já entrega σ, τ e a área corrigida prontos, nas colunas 5, 9 e 14
+(`formato-bruto.md` §3). Não há força a converter nem área a corrigir. **Duas semanas
+livres** — passe-as para a rotina de qualidade e para a Semana 14, que é onde está a
+dificuldade real.
 
 ### Semana 14 — Identificação da ruptura
 - [ ] Localizar o pico de τ e o valor residual na curva

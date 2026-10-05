@@ -32,6 +32,11 @@ referencias/pdfs/*
 /figuras/
 *.pdf.bak
 
+# Excecao: as figuras dos registros sao versionadas. Elas sao geradas por script,
+# mas um registro precisa abrir completo para quem chega de fora -- inclusive no
+# GitHub, onde markdown com imagem faltando nao mostra nada.
+!docs/registros/figuras/
+
 # Sistema operacional
 Thumbs.db
 desktop.ini
