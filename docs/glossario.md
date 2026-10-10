@@ -1,6 +1,6 @@
 # Glossário
 
-_Última atualização: 13/09/2026_
+_Última atualização: 10/10/2026_
 
 Termos técnicos que aparecem neste projeto, explicados uma vez e registrados aqui.
 
@@ -174,6 +174,35 @@ o que já está marcado.
 Arquivo que dá instruções ao Git sobre como tratar certos arquivos.
 **Aqui:** `*.csv -text` manda o Git não mexer nas quebras de linha dos CSV, para que os
 dados brutos cheguem a qualquer computador exatamente como a máquina os gravou.
+
+### `remote` / `origin`
+Uma cópia do repositório que mora em outro lugar. `origin` é o nome padrão da principal.
+**Aqui:** `origin` é o GitHub, `github.com/TiagoNaves27/PIBITI-2026`. `origin/main` é a
+última versão da `main` do GitHub que o seu computador conhece.
+
+### `push` / `fetch`
+`git push` envia seus commits locais para o remote. `git fetch` faz o contrário só pela
+metade: baixa as novidades do remote para consulta, **sem mexer em nenhum arquivo seu**.
+Por isso `fetch` é sempre seguro — é o primeiro passo para comparar o local com o GitHub.
+**Como ler:** `git branch -vv` mostra `[origin/main]` quando está igual; `[origin/main:
+ahead 2]` quando há 2 commits seus que o GitHub ainda não tem.
+
+### `.gitignore`
+Lista de arquivos e pastas que o Git finge não ver: não aparecem no `git status` e nunca
+entram num commit.
+**Aqui:** `.venv/`, `__pycache__/`, `.pytest_cache/` — coisas que o computador regenera
+sozinho e não fazem sentido no GitHub.
+
+### `worktree`
+Uma segunda pasta de trabalho ligada ao **mesmo** repositório, com sua própria branch, para
+mexer em algo sem bagunçar a pasta principal. O histórico é um só; só os arquivos em
+edição ficam separados.
+**Aqui:** cada sessão do Claude Code roda num worktree em `.claude/worktrees/<nome>/`. A
+pasta principal continua sendo `Documents/PIBITI_2026/`.
+
+### `branch`
+Uma linha de commits com nome próprio. `main` é uma branch; um worktree cria outra
+(`claude/...`) para não mexer na `main` diretamente.
 
 ---
 
