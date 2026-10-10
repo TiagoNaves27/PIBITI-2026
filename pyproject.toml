@@ -39,6 +39,8 @@ addopts = "-q"
 [tool.ruff]
 line-length = 100
 src = ["src", "tests", "scripts"]
+# skills do Claude Code vêm de fora e não seguem o estilo do projeto
+extend-exclude = [".claude"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
