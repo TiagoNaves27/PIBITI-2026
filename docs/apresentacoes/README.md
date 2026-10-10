@@ -38,6 +38,40 @@ orientador e outras apresentações.
 | 16/09/2026 | [Reunião de alinhamento](2026-09-16-reuniao-alinhamento.html) |
 | 29/09/2026 | [Teste de design — Terra oficial](2026-09-29-teste-design-terra.html) e [Teste de design — GeoFluxo real](2026-09-29-teste-design-geofluxo.html) |
 | 30/09/2026 | [**Reunião de alinhamento — Swiss Modern**](2026-09-30-reuniao-alinhamento.html) (versão a apresentar) · [roteiro de fala](2026-09-30-reuniao-alinhamento-roteiro.md) |
+| 10/10/2026 | [Boas-vindas ao projeto](2026-10-10-boas-vindas.html) — resumo de tudo até aqui, para quem chega ao projeto · [roteiro de fala](2026-10-10-boas-vindas-roteiro.md) |
+
+---
+
+## Boas-vindas ao projeto — 10/10/2026
+
+Para apresentar o projeto a um novo integrante: o que o sistema faz, o que o acervo ensinou,
+onde estamos e por onde começar. Não é reunião com o orientador, então a regra dos 7 a 10
+minutos não se aplica. Não traz número novo — tudo vem de registro ou documento já existente.
+O gráfico do slide 11 é desenhado no próprio slide com os valores de
+`scripts/apoio_apresentacao.py curvas-d1n`.
+
+| # | Slide | Referência |
+| --- | --- | --- |
+| 1 | Capa | 914 de `2026-09-12-triagem-do-acervo.md` |
+| 2 | Em uma frase | `arquitetura/visao-geral.md` §2; 1.081 e 914 da triagem; 19 testes de `uv run pytest` (10/10/2026); 8 registros em `docs/registros/`; 2h/semana de `plano/metas-semanais.md` |
+| 3 | Roteiro | — (estrutural) |
+| 4 | Mudança de escopo | `2026-09-12-mudanca-de-escopo.md`; `visao-geral.md` §1 e §9 |
+| 5 | O fluxo | `visao-geral.md` §2, §5 e §6; situação de cada etapa de `metas-semanais.md`, “Onde estamos — 10/10/2026” |
+| 6 | Divisor: descobertas | triagem (1.081, 914, 21); `2026-09-29-ruptura-a-10mm.md` (φ 32,2° × 5,1°) |
+| 7 | Formato e layouts | `2026-09-13-dois-layouts.md`; `arquitetura/formato-bruto.md` |
+| 8 | Triagem do acervo | `2026-09-12-triagem-do-acervo.md` |
+| 9 | Ensaios travados | `2026-09-12-ensaios-travados.md` (funil, NT 608); `2026-09-12-forma-da-curva.md` (211, 23,6×) |
+| 10 | O ID não é dado | `2026-09-12-id-nao-e-dado.md`; c = −2,1 kPa de `2026-09-29-ruptura-a-10mm.md` |
+| 11 | Envoltória D1N | `2026-09-29-ruptura-a-10mm.md` (c, φ, R² e variantes, τ a 10 mm) |
+| 12 | Citação | `visao-geral.md` §3 |
+| 13 | Situação das metas | `plano/metas-semanais.md`; `plano/entregas/README.md` |
+| 14 | Reunião de 30/09 | `reunioes/2026-09-30-alinhamento.md` |
+| 15 | Em aberto | `visao-geral.md` §3 e §8; `perguntas-orientador.md`; os 103 ensaios de `2026-09-29-ruptura-a-10mm.md`; livro azul e sugestões da ata de 30/09 |
+| 16 | Mapa do repositório | `docs/mapa-do-repositorio.md` |
+| 17 | Regras da casa | `CLAUDE.md`; `docs/registros/README.md` |
+| 18 | Primeiro dia | `README.md` §Ambiente; saídas conferidas em 10/10/2026 |
+| 19 | Onde ajudar | `metas-semanais.md`, “Onde estamos — 10/10/2026”; `plano/entregas/`. A sugestão de uma branch por tarefa é recomendação, não decisão registrada |
+| 20 | Fechamento | — |
 
 ---
 
