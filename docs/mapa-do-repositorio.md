@@ -1,6 +1,6 @@
 # Mapa do repositório
 
-_Última atualização: 13/09/2026_
+_Última atualização: 10/10/2026_
 
 Onde cada coisa mora. Serve para responder "em que arquivo estava aquilo?" sem ter que abrir
 pasta por pasta.
@@ -16,6 +16,8 @@ pasta por pasta.
 | o que **perguntar ao orientador** na reunião | [`docs/arquitetura/perguntas-orientador.md`](arquitetura/perguntas-orientador.md) |
 | significado de um **termo** que apareceu | [`docs/glossario.md`](glossario.md) |
 | as **descobertas** do projeto, com número e figura | [`docs/registros/`](registros/) |
+| o que o **professor disse** numa reunião | [`docs/reunioes/`](reunioes/) — copie o `MODELO.md` |
+| os **slides** de uma reunião | [`docs/apresentacoes/`](apresentacoes/) |
 | o **relatório semanal** para o orientador | [`docs/diario/`](diario/) — copie o `MODELO.md` |
 | o documento **submetido ao PIBITI** | [`docs/plano/PlanoTrabalho-PIBITI_4.md`](plano/PlanoTrabalho-PIBITI_4.md) |
 | o **script** que gerou um número citado | [`scripts/`](../scripts) |
@@ -55,6 +57,11 @@ Dividida por finalidade, não por assunto:
   `AAAA-MM-DD-assunto.md`, com título em forma de afirmação. A pasta se ordena sozinha e vira
   a linha do tempo do projeto. As regras estão no `README.md` de lá; as imagens, em
   `figuras/`, geradas por script.
+- **`reunioes/`** — o que se disse em cada reunião, uma ata por reunião, nomeada
+  `AAAA-MM-DD-assunto.md`. Separa o que o professor disse das ideias do aluno; as regras
+  estão no `README.md` de lá, e o gabarito no `MODELO.md`.
+- **`apresentacoes/`** — os slides levados às reuniões, em HTML, cada um com a tabela de
+  referências slide a slide. Estilo em `ESTILO.md`, ponto de partida em `MODELO.html`.
 - **`diario/`** — o que se fez em cada semana, cronológico, para o orientador. Copie
   `MODELO.md` para `AAAA-MM-DD.md` no fim de cada semana.
 - **`links/`** — o índice dos Artifacts: os links das páginas hospedadas, com uma linha

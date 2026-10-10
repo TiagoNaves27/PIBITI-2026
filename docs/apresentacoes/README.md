@@ -14,6 +14,10 @@ orientador e outras apresentações.
   Nas apresentações a partir de 29/09/2026, também rolagem do mouse e deslizar o dedo.
 - **Estilo:** Swiss Modern, desde 29/09/2026 — regras em [`ESTILO.md`](ESTILO.md). Para uma
   apresentação nova, copiar [`MODELO.html`](MODELO.html), que tem um exemplo de cada componente.
+- **Reunião com o orientador: 7 a 10 minutos.** Resultados e perguntas; métodos usados e
+  dificuldades encontradas. Sem explicar teoria. Pedido do professor em 30/09/2026 —
+  [ata](../reunioes/2026-09-30-alinhamento.md). A apresentação de 30/09 abaixo, com cerca de
+  20 minutos, é anterior a esse pedido.
 - **Cada apresentação abaixo tem sua tabela de referências**, slide a slide: de qual registro
   ou documento cada slide tirou frase, número ou figura. Servem para uma coisa só — quando um
   registro for corrigido (o `2026-09-12-triagem-do-acervo.md` já avisa que os 914 podem

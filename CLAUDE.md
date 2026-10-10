@@ -69,6 +69,16 @@ A skill `frontend-slides` está instalada em `.claude/skills/`. Ao usá-la aqui,
 escolhido: pular a descoberta de estilo (prévias) e gerar direto no Swiss Modern do `ESTILO.md`,
 salvando em `docs/apresentacoes/` — a menos que o aluno peça para explorar outro estilo.
 
+Reunião com o orientador dura **7 a 10 minutos**: resultados, perguntas, métodos e dificuldades,
+sem teoria (pedido do professor em 30/09/2026).
+
+## Reuniões
+
+Atas em `docs/reunioes/`, uma por reunião (`AAAA-MM-DD-assunto.md`), a partir do `MODELO.md`
+de lá. Regra central: **o que o professor disse fica separado das ideias do aluno**. Na dúvida
+sobre quem disse, perguntar ao aluno — nunca atribuir ao professor. Ideia do aluno não muda
+escopo; decisão fechada que muda escopo atualiza o `visao-geral.md` no mesmo commit.
+
 ## Ambiente
 
 `uv` gerencia tudo. Python 3.14, Windows.
