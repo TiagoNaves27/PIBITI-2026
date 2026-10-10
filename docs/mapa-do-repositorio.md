@@ -10,6 +10,7 @@ pasta por pasta.
 | Estou procurando… | Está em |
 | --- | --- |
 | o que fazer **nesta semana** | [`docs/plano/metas-semanais.md`](plano/metas-semanais.md) |
+| **quando** uma meta foi feita e o que foi feito nela | [`docs/plano/entregas/`](plano/entregas/README.md) |
 | **links** dos cursos e livros para estudar | [`docs/plano/roteiro-estudos.md`](plano/roteiro-estudos.md) |
 | o que o projeto **é hoje** (decisões vigentes) | [`docs/arquitetura/visao-geral.md`](arquitetura/visao-geral.md) |
 | como são os **arquivos das máquinas** (colunas, separador, codificação) | [`docs/arquitetura/formato-bruto.md`](arquitetura/formato-bruto.md) |
@@ -46,6 +47,8 @@ Dividida por finalidade, não por assunto:
   - `roteiro-estudos.md`: os blocos de estudo (pandas, resistência ao cisalhamento, …), cada
     um amarrado à semana em que o assunto é usado. **Os links de curso, documentação e livro
     online estão todos aqui.**
+  - `entregas/`: uma ficha por meta que já andou — quando, o que foi feito, como conferir. A
+    tabela do `README.md` de lá dá a situação de todas de uma vez.
   - `PlanoTrabalho-PIBITI_4.md`: o documento oficial submetido. Histórico — não se edita.
 - **`arquitetura/`** — o que o projeto é.
   - `visao-geral.md`: estado real e decisões vigentes. **Prevalece sobre o plano** quando os
@@ -83,6 +86,7 @@ qualquer um pode ser rodado de novo para conferir:
 | `ensaios_nao_rompidos.py` | quais ensaios não chegaram a romper |
 | `id_versus_sigma.py` | o identificador do ensaio bate com a tensão normal? |
 | `razao_tau_sigma.py` | a razão τ/σ de cada ensaio |
+| `parser_no_acervo.py` | o parser lê todo o acervo? quantos arquivos recusa? |
 | `figura_*.py` | as figuras dos registros |
 
 Todos se rodam igual: `uv run python scripts/<nome>.py`.
